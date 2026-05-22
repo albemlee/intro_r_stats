@@ -1,0 +1,127 @@
+---
+title: "Week 5 — Inferential Statistics and Hypothesis Testing"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Point Estimate
+
+```{r point-estimate}
+# Mean bill length as a point estimate for the population mean
+point_est <- mean(penguins$bill_length_mm, na.rm = TRUE)
+cat("Point estimate (mean bill length):", round(point_est, 2), "mm\n")
+```
+
+---
+
+## Standard Error via Bootstrapping
+
+```{r bootstrap-se}
+set.seed(42)
+
+# Draw 300 resamples and compute the mean for each
+boot_means <- replicate(300, {
+  resample <- penguins %>%
+    drop_na(bill_length_mm) %>%
+    sample_n(size = nrow(drop_na(penguins, bill_length_mm)), replace = TRUE)
+  mean(resample$bill_length_mm)
+})
+
+se <- sd(boot_means)
+cat("Standard error:", round(se, 4), "\n")
+
+# The bootstrap distribution should be approximately normal
+hist(boot_means, main = "Bootstrap distribution of mean bill length",
+     xlab = "Mean bill length (mm)")
+```
+
+---
+
+## 95% Confidence Interval
+
+```{r confidence-interval}
+lower <- point_est - 1.96 * se
+upper <- point_est + 1.96 * se
+
+cat("95% CI:", round(lower, 2), "to", round(upper, 2), "\n")
+```
+
+**Write a plain-language interpretation of this confidence interval:**
+
+*Your interpretation here:*
+
+---
+
+## Normality Check
+
+```{r normality-check}
+# Check normality for Gentoo flipper lengths
+gentoo <- penguins %>%
+  filter(species == "Gentoo") %>%
+  drop_na(flipper_length_mm)
+
+# Histogram
+ggplot(gentoo, aes(x = flipper_length_mm)) +
+  geom_histogram(bins = 20) +
+  labs(title = "Gentoo flipper length distribution")
+
+# Shapiro-Wilk test
+shapiro.test(gentoo$flipper_length_mm)
+```
+
+**Question:** Based on the histogram and Shapiro-Wilk result, is the normality assumption met for Gentoo flipper lengths?
+
+*Your answer here:*
+
+---
+
+## Comparing Two Groups
+
+```{r two-group-test}
+# Compare flipper length between male and female Gentoo penguins
+gentoo_sex <- penguins %>%
+  filter(species == "Gentoo") %>%
+  drop_na(sex, flipper_length_mm)
+
+# t-test (parametric)
+t.test(flipper_length_mm ~ sex, data = gentoo_sex)
+```
+
+**Write the full hypothesis test conclusion:**
+
+*H₀:*  
+*Hₐ:*  
+*Test used and why:*  
+*p-value:*  
+*Conclusion:*  
+*Possible error type:*
+
+---
+
+## Chi-Squared Test
+
+```{r chisq-test}
+# Is species independent of sex?
+chisq.test(table(penguins$species, penguins$sex))
+```
+
+---
+
+## 🔨 Exercise: ANOVA
+
+```{r anova-exercise}
+# 1. Run a one-way ANOVA to test whether mean body_mass_g differs across species
+# Your code here
+
+# 2. If significant, run pairwise.t.test() with Bonferroni correction
+# Your code here
+
+# 3. Which pairs of species differ significantly?
+# Your answer as a comment here
+```

@@ -1,0 +1,136 @@
+---
+title: "Week 4 — Descriptive Statistics and Visualization"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Descriptive vs. Inferential — the key distinction
+
+```{r penguin-summary}
+# Compute mean bill length by species — this is descriptive
+penguins %>%
+  group_by(species) %>%
+  summarize(mean_bill_mm = mean(bill_length_mm, na.rm = TRUE))
+```
+
+**Question:** Write one accurate and one inaccurate conclusion from the table above.
+
+*Accurate (descriptive):*  
+*Inaccurate (inferential overreach):*
+
+---
+
+## Grammar of Graphics
+
+```{r ggplot-layers}
+# Build a plot layer by layer
+
+# Layer 1: data + coordinate system
+penguins %>%
+  ggplot()
+
+# Layer 2: add a geometry
+penguins %>%
+  ggplot() +
+    geom_histogram(mapping = aes(x = bill_length_mm))
+
+# Layer 3: add color by species
+penguins %>%
+  ggplot() +
+    geom_histogram(mapping = aes(x = bill_length_mm, fill = species),
+                   bins = 30, alpha = 0.7)
+```
+
+---
+
+## Categorical Variables
+
+```{r bar-plot}
+# Bar plot of species counts
+penguins %>%
+  ggplot() +
+    geom_bar(mapping = aes(x = species))
+```
+
+```{r factor-ordering}
+# Control category order with factors
+penguins %>%
+  mutate(species = factor(species, levels = c("Gentoo", "Adelie", "Chinstrap"))) %>%
+  ggplot() +
+    geom_bar(mapping = aes(x = species))
+```
+
+### 🔨 Exercise: Categorical
+
+```{r categorical-exercise}
+# 1. Create a bar plot of counts by island
+# Your code here
+
+# 2. Compute count and proportion of penguins per species
+# (proportion = count / sum(count))
+# Your code here
+```
+
+---
+
+## Continuous Variables
+
+```{r histogram-demo}
+# Always plot first to assess shape
+penguins %>%
+  ggplot() +
+    geom_histogram(aes(x = body_mass_g), bins = 30)
+```
+
+**Question:** Does body_mass_g look normally distributed? Which summary statistics are appropriate?
+
+*Your answer here:*
+
+```{r summary-stats}
+# Summary statistics
+mean(penguins$body_mass_g, na.rm = TRUE)
+sd(penguins$body_mass_g, na.rm = TRUE)
+summary(penguins$body_mass_g)
+```
+
+```{r facet-histogram}
+# Faceted by species — does shape differ by group?
+penguins %>%
+  ggplot() +
+    geom_histogram(aes(x = body_mass_g), bins = 20) +
+    facet_wrap(~species)
+```
+
+### 🔨 Exercise: Continuous
+
+```{r continuous-exercise}
+# 1. Plot a histogram of flipper_length_mm
+# Your code here
+
+# 2. Report the appropriate summary statistics (justify your choice)
+# Your code here
+
+# 3. Create a scatter plot of bill_length_mm (x) vs body_mass_g (y), colored by species
+# Your code here
+```
+
+---
+
+## EDA Gallery — Your Turn
+
+```{r eda-your-choice}
+# Create one additional plot of your choice that shows something interesting
+# about the penguins dataset. Write a 1-2 sentence description below.
+
+# Your plot here
+
+
+# Description (use sample-appropriate language):
+# "In this sample of 344 penguins..."
+```

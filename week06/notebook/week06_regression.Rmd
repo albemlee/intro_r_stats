@@ -1,0 +1,119 @@
+---
+title: "Week 6 — Linear and Logistic Regression"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+> **Note:** The lesson slides use the HRS (Health and Retirement Study) dataset.  
+> This notebook uses the Palmer Penguins dataset so no additional data download is needed.  
+> Replace with your own dataset for your final project.
+
+---
+
+## Linear Regression
+
+### Data check — is the outcome continuous and roughly normal?
+
+```{r outcome-check}
+# We'll predict body_mass_g from flipper_length_mm
+penguins %>%
+  drop_na(body_mass_g) %>%
+  ggplot(aes(x = body_mass_g)) +
+    geom_histogram(bins = 30) +
+    labs(title = "Distribution of body mass (outcome variable)")
+```
+
+**Question:** Does `body_mass_g` look approximately normal? Is linear regression appropriate?
+
+*Your answer here:*
+
+---
+
+### Fit the model
+
+```{r linear-model}
+penguins_clean <- penguins %>% drop_na(body_mass_g, flipper_length_mm, sex, species)
+
+model_linear <- glm(body_mass_g ~ flipper_length_mm, data = penguins_clean)
+summary(model_linear)
+```
+
+**Interpret the `flipper_length_mm` coefficient in plain language:**
+
+*Your interpretation here (include: predictor, outcome, direction, magnitude, significance):*
+
+---
+
+### Multivariable linear regression
+
+```{r multivariable-linear}
+model_multi <- glm(body_mass_g ~ flipper_length_mm + species + sex, data = penguins_clean)
+summary(model_multi)
+```
+
+**Pick one coefficient and interpret it (include "holding other variables constant"):**
+
+*Your interpretation here:*
+
+---
+
+### Residual diagnostics
+
+```{r residuals}
+par(mfrow = c(1, 2))
+plot(model_multi, which = 1)   # Residuals vs. Fitted
+plot(model_multi, which = 2)   # QQ plot
+```
+
+**Question:** Do the residuals look well-behaved? Describe what you see.
+
+*Your answer here:*
+
+---
+
+## Logistic Regression
+
+```{r logistic-setup}
+# Create a binary outcome: is the penguin above median mass?
+median_mass <- median(penguins_clean$body_mass_g)
+penguins_clean <- penguins_clean %>%
+  mutate(heavy = as.integer(body_mass_g > median_mass))
+
+table(penguins_clean$heavy)
+```
+
+```{r logistic-model}
+model_logistic <- glm(heavy ~ flipper_length_mm + species,
+                      family = binomial, data = penguins_clean)
+summary(model_logistic)
+```
+
+```{r odds-ratios}
+# Convert log-odds to odds ratios
+exp(coef(model_logistic))
+```
+
+**Interpret the odds ratio for `flipper_length_mm`:**
+
+*Your interpretation here (include: predictor, outcome, OR value, direction, significance):*
+
+---
+
+## 🔨 Exercise: Multicollinearity Check
+
+```{r vif-exercise}
+# Install car if needed: install.packages("car")
+library(car)
+
+# Check VIF for the multivariable linear model
+vif(model_multi)
+
+# Question: Are any VIF values concerning? What does this tell you?
+# Your answer here as a comment:
+```

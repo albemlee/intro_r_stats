@@ -1,0 +1,162 @@
+---
+title: "Week 3 — Data Manipulation with the Tidyverse"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Tibbles
+
+```{r tibble-intro}
+# Print the penguins tibble
+penguins
+```
+
+**Question:** How many rows and columns does `penguins` have? What types are the columns?
+
+*Your answer here:*
+
+```{r tibble-indexing}
+# [ ] returns a tibble
+penguins[1:3, "species"]
+
+# [[ ]] returns a vector
+penguins[["species"]] |> head(10)
+
+# $ returns a vector
+penguins$species |> head(10)
+```
+
+---
+
+## The Pipe and Tidyverse Verbs
+
+```{r pipe-demo}
+# Base R vs tidyverse — same result, different readability
+# Base R:
+penguins[penguins$species == "Adelie", c("species", "bill_length_mm")]
+
+# Tidyverse:
+penguins %>%
+  filter(species == "Adelie") %>%
+  select(species, bill_length_mm)
+```
+
+---
+
+## select() and filter()
+
+```{r select-demo}
+# Keep only a few columns
+penguins %>%
+  select(species, island, bill_length_mm)
+```
+
+```{r filter-demo}
+# Keep only Gentoo penguins
+penguins %>%
+  filter(species == "Gentoo")
+```
+
+```{r filter-combined}
+# Combine conditions: Chinstrap penguins with bill > 47mm
+penguins %>%
+  filter(species == "Chinstrap" & bill_length_mm > 47) %>%
+  select(species, bill_length_mm, sex)
+```
+
+### 🔨 Exercise: select() and filter()
+
+```{r subset-exercise}
+# 1. Select only species, island, and body_mass_g
+# Your code here
+
+# 2. Filter to female penguins only
+# Your code here
+
+# 3. Filter to Adelie penguins on Torgersen island,
+#    keeping only species, island, and bill_length_mm
+# Your code here
+```
+
+---
+
+## mutate()
+
+```{r mutate-demo}
+# Add a bill length in cm column
+penguins %>%
+  mutate(bill_length_cm = bill_length_mm / 10) %>%
+  select(species, bill_length_mm, bill_length_cm) %>%
+  head(5)
+```
+
+### 🔨 Exercise: mutate()
+
+```{r mutate-exercise}
+# 1. Add a column is_large_penguin (TRUE if body_mass_g > 4500)
+# Your code here
+
+# 2. Filter to Adelie penguins, then add bill_ratio (bill_length_mm / bill_depth_mm)
+# Your code here
+```
+
+---
+
+## group_by() and summarize()
+
+```{r summarize-demo}
+# Summary statistics per species
+penguins %>%
+  group_by(species) %>%
+  summarize(
+    count           = n(),
+    mean_bill_mm    = mean(bill_length_mm, na.rm = TRUE),
+    mean_mass_g     = mean(body_mass_g, na.rm = TRUE)
+  )
+```
+
+### 🔨 Exercise: group_by() and summarize()
+
+```{r summarize-exercise}
+# 1. Compute count and mean flipper_length_mm per island
+# Your code here
+
+# 2. Filter to non-missing sex, then compute mean body mass per species AND sex
+# Your code here
+```
+
+---
+
+## Joins
+
+```{r join-demo}
+# Two small tibbles to join
+island_info <- tibble(
+  island = c("Torgersen", "Biscoe", "Dream"),
+  region = c("Antarctic Peninsula", "Palmer Archipelago", "Palmer Archipelago")
+)
+
+# Left join — keeps all rows from penguins
+joined <- penguins %>%
+  left_join(island_info, by = "island")
+
+nrow(penguins)    # rows before
+nrow(joined)      # rows after — should be the same
+```
+
+### 🔨 Exercise: Joins
+
+```{r join-exercise}
+# Does an inner_join give the same number of rows? Why or why not?
+penguins %>%
+  inner_join(island_info, by = "island") %>%
+  nrow()
+
+# Your explanation here (as a comment):
+```
