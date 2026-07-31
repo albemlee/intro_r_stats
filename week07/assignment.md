@@ -23,8 +23,8 @@ Complete all items before the Week 8 session.
 
 ### Code
 - [ ] Public GitHub repository created
-- [ ] All R code in the repository and runs without errors
-- [ ] Code is commented
+- [ ] All `.Rmd` notebooks in the repository and knit without errors
+- [ ] Notebooks include prose explanations alongside code chunks
 - [ ] If AI tools were used: `prompts.txt` file in the repo with all prompts used, and a note in the README
 
 ### Submission

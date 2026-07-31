@@ -1,7 +1,7 @@
 # Week 6 Assignment — Regression Analysis
 
 **Due:** Before Week 7 session  
-**Submit:** One `.R` script + written paragraph (150–200 words)
+**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
 
 ---
 
@@ -19,7 +19,7 @@ Determine whether your dependent variable is:
 - **Continuous** → use linear regression (`glm()`, default family)
 - **Binary** → use logistic regression (`glm(..., family = binomial)`)
 
-Show a data check (histogram for continuous; frequency table for binary) confirming your choice.
+Show a data check (histogram for continuous; frequency table for binary) confirming your choice. In a prose section, briefly justify your choice of model.
 
 ### Task 2: Fit the model
 
@@ -27,7 +27,7 @@ Include at least one independent variable. Show the model code and full output.
 
 ### Task 3: Interpret at least two coefficients
 
-For each coefficient (or odds ratio for logistic):
+In a prose section after the model output, interpret each coefficient (or odds ratio for logistic):
 - Name the predictor and outcome
 - State the direction and magnitude
 - Note whether it is statistically significant
@@ -36,14 +36,14 @@ For logistic regression, remember to use `exp(coef(model))` for odds ratios.
 
 ### Task 4: Run one diagnostic check
 
-- **Linear regression:** Run `plot(model, which = 1)` and `plot(model, which = 2)`. Describe what you see.
-- **Logistic regression (multivariable):** Run `car::vif(model)`. Are any values concerning?
+- **Linear regression:** Run `plot(model, which = 1)` and `plot(model, which = 2)`. In a prose section, describe what you see.
+- **Logistic regression (multivariable):** Run `car::vif(model)`. In a prose section, note whether any values are concerning.
 
 ---
 
 ## Written paragraph
 
-150–200 words describing:
+Include a final prose section (150–200 words) summarizing:
 - Your model (outcome + predictors)
 - Key results (coefficient interpretations)
 - Any diagnostic concerns
@@ -52,4 +52,4 @@ For logistic regression, remember to use `exp(coef(model))` for odds ratios.
 
 ## Submission
 
-Submit your `.R` script and written paragraph via [LMS / email].
+Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week06_[your_last_name].Rmd`.

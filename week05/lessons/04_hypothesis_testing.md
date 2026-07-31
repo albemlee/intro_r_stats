@@ -55,4 +55,6 @@ Reject the null hypothesis. The p-value (0.03) is below the significance level (
 
 ## Optional video
 
-Search YouTube for **"p-values explained StatQuest"** (~5 min) — one of the clearest explanations available.
+A video (~8–9 min) walks through the slides for this lesson and covers the logic of hypothesis testing, the null and alternative hypotheses, the p-value, and the pass/fail nature of statistical decisions.
+
+📄 [View the video script](video_scripts/04_hypothesis_testing_script.md) · 🖼️ [Download the slides](../slides/05_hypothesis_testing.pdf)

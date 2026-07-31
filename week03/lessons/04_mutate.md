@@ -83,3 +83,11 @@ library(palmerpenguins)
 # 3. Chain: filter to Adelie penguins, then add bill_ratio (bill_length_mm / bill_depth_mm)
 # Your code here
 ```
+
+---
+
+## Optional video
+
+A short video (~6–7 min) walks through the slides for this lesson and covers creating new columns, modifying existing ones, and the key difference between `mutate()` and `summarize()`.
+
+📄 [View the video script](video_scripts/04_mutate_script.md) · 🖼️ [Download the slides](../slides/04_mutate.pdf)

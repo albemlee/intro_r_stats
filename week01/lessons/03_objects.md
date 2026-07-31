@@ -88,23 +88,3 @@ print(y)
 </details>
 
 ---
-
-## Practice
-
-```r
-# 1. Create an object called bill_length with the value 45.1
-# Your code here
-
-# 2. Create an object called bill_length_cm by converting bill_length from mm to cm
-#    (divide by 10)
-# Your code here
-
-# 3. Print both objects
-# Your code here
-```
-
----
-
-## Optional video
-
-Search YouTube for **"R variables and objects tutorial"** (~5 min) for a walkthrough with the RStudio environment pane.

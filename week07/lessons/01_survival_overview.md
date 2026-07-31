@@ -47,4 +47,6 @@ Survival analysis is specifically designed to handle censoring correctly. Standa
 
 ## Optional video
 
-Search YouTube for **"survival analysis introduction statistics"** (~8 min) — StatQuest has a clear conceptual overview.
+A short video (~6–7 min) walks through the slides for this lesson and covers time-to-event data, censoring, why you must not remove censored observations, and the three survival analysis methods.
+
+📄 [View the video script](video_scripts/01_survival_overview_script.md) · 🖼️ [Download the slides](../slides/01_survival_overview.pdf)

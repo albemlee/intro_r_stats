@@ -1,7 +1,7 @@
 # Week 3 Assignment — Data Manipulation with the Tidyverse
 
 **Due:** Before Week 4 session  
-**Submit:** One `.R` script file + a brief written note (2–3 sentences)
+**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
 
 ---
 
@@ -21,7 +21,7 @@ Find a publicly available dataset (CSV format) with at least **4 columns** and *
 
 ### Task 1: Filter and select
 
-Write a tidyverse pipeline that filters your data to a meaningful subset of rows and keeps only relevant columns. Add a comment explaining the research question you are addressing.
+Write a tidyverse pipeline that filters your data to a meaningful subset of rows and keeps only relevant columns. In a prose section before the code chunk, state the research question you are addressing.
 
 ### Task 2: mutate()
 
@@ -31,15 +31,15 @@ Create at least one new column using `mutate()`. The new column should be derive
 
 Produce a grouped summary table. Your summary should include at least one count and one mean (or other aggregate statistic).
 
-### Task 4: Comments
+### Task 4: Prose explanations
 
-Add a plain-English comment **above each pipeline step** explaining what it does.
+Before each code chunk, write a brief prose paragraph explaining what the code does in plain English.
 
 ---
 
 ## Written note
 
-In 2–3 sentences, describe:
+Include a short prose section (2–3 sentences) in your notebook describing:
 - What dataset you chose and where it came from
 - What you found interesting about the summary table from Task 3
 
@@ -47,4 +47,4 @@ In 2–3 sentences, describe:
 
 ## Submission
 
-Submit your `.R` script and written note (in the same document or as a comment at the top of the script) via [LMS / email].
+Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week03_[your_last_name].Rmd`.

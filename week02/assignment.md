@@ -1,13 +1,15 @@
 # Week 2 Assignment — R Programming Fundamentals
 
 **Due:** Before Week 3 session  
-**Submit:** One `.R` script file
+**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
 
 ---
 
 ## Instructions
 
-Write a single, well-commented R script that does all of the following. Your script must run from top to bottom without errors.
+Write a single R Markdown notebook that does all of the following. Your notebook must knit without errors.
+
+Use prose sections (outside of code chunks) to explain your thinking where indicated.
 
 ### 1. Create a data frame
 
@@ -30,17 +32,26 @@ Write a function that takes your data frame as input and does **at least two** o
 
 Call your function on `my_df` and print the result.
 
-### 4. Comment your code
+### 4. Explain your code
 
-Add a meaningful comment above every major block of code explaining **what it does and why** — not just restating the code in English.
+Above each major code chunk, add a brief prose paragraph (or use chunk labels/comments) explaining **what it does and why** — not just restating the code in English.
 
 ---
 
 ## Example structure (do not copy — write your own)
 
-```r
-# ── Data ──────────────────────────────────────────
-# Patient data from a fictional clinical study
+````
+---
+title: "Week 2 Assignment"
+author: "Your Name"
+output: html_document
+---
+
+## Data
+
+Patient data from a fictional clinical study.
+
+```{r create-data}
 patient_df <- data.frame(
   patient_id  = c(1, 2, 3, 4, 5, 6),
   age         = c(34, 52, 61, 45, 38, 70),
@@ -48,22 +59,30 @@ patient_df <- data.frame(
                   "healthy", "diabetes", "healthy"),
   systolic_bp = c(142, 118, 155, 108, 130, 145)
 )
+```
 
-# ── Function ───────────────────────────────────────
-# Identify high-risk patients (systolic BP > 140) and return a summary
+## Function
+
+This function identifies high-risk patients (systolic BP > 140) and returns them as a filtered data frame.
+
+```{r define-function}
 summarize_high_risk <- function(df) {
   high_risk <- df[df$systolic_bp > 140, ]
   cat("High-risk patients:", nrow(high_risk), "\n")
   return(high_risk)
 }
+```
 
-# ── Call the function ──────────────────────────────
+## Result
+
+```{r call-function}
 result <- summarize_high_risk(patient_df)
 print(result)
 ```
+````
 
 ---
 
 ## Submission
 
-Submit your `.R` file via [LMS / email]. Name it `week02_[your_last_name].R`.
+Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week02_[your_last_name].Rmd`.

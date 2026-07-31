@@ -88,3 +88,11 @@ library(palmerpenguins)
 # 2. Check: does the number of rows change with an inner_join instead?
 # Your code here
 ```
+
+---
+
+## Optional video
+
+A video (~8–10 min) walks through the slides for this lesson and covers stacking tibbles with `bind_rows()`, joining related tibbles with `left_join()`, and the difference between join types.
+
+📄 [View the video script](video_scripts/06_joins_script.md) · 🖼️ [Download slides (concatenate)](../slides/06_concatenate.pdf) · [Download slides (joins)](../slides/07_joins.pdf)

@@ -74,4 +74,6 @@ prescriptions_df <- prescriptions_df[
 
 ## Optional video
 
-Search YouTube for **"dplyr tutorial R tidyverse"** (~10 min) — the tidyverse official channel has good short walkthroughs.
+A short video (~6–8 min) walks through the slides for this lesson and covers the tidyverse philosophy, the pipe operator, and how tidyverse code compares to base R.
+
+📄 [View the video script](video_scripts/02_tidyverse_script.md) · 🖼️ [Download the slides](../slides/02_tidyverse.pdf)

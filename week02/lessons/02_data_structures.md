@@ -136,4 +136,6 @@ penguins_small[, "species"]   # species column
 
 ## Optional video
 
-Search YouTube for **"R data frames tutorial for beginners"** (~8–10 min).
+A longer video (~10–12 min) walks through the slides for this lesson and covers vectors, matrices, and data frames — including indexing and when to use each structure.
+
+📄 [View the video script](video_scripts/05_data_structures_script.md) · 🖼️ [Download the slides](../slides/05_vectors.pdf) · [06_matrices.pdf](../slides/06_matrices.pdf) · [07_dataframes.pdf](../slides/07_dataframes.pdf)

@@ -73,4 +73,6 @@ A linear regression predicts systolic BP from age. The coefficient for age is 0.
 
 ## Optional video
 
-Search YouTube for **"linear regression explained StatQuest"** (~10 min).
+A video (~10–12 min) walks through the slides for this lesson and covers fitting linear regression in R, reading the coefficient table, interpreting simple and multivariable models, and the likelihood ratio test.
+
+📄 [View the video script](video_scripts/01_linear_regression_script.md) · 🖼️ [Download slides (overview)](../slides/01_linear_regression_overview.pdf) · [Download slides (interpretation)](../slides/02_linear_regression_interpretation.pdf)

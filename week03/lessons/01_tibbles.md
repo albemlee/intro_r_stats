@@ -66,4 +66,6 @@ penguins
 
 ## Optional video
 
-Search YouTube for **"tibbles vs data frames in R"** (~5 min).
+A short video (~5–6 min) walks through the slides for this lesson and covers the distinction between data frames and tibbles, printing behavior, and subsetting differences.
+
+📄 [View the video script](video_scripts/01_tibbles_script.md) · 🖼️ [Download the slides](../slides/01_tibbles.pdf)

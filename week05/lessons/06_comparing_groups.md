@@ -82,3 +82,11 @@ library(palmerpenguins)
 # 3. State H₀, Hₐ, your p-value, and your conclusion in plain language
 # (Write as a comment in your R script)
 ```
+
+---
+
+## Optional video
+
+A video (~10–12 min) walks through the slides for this lesson and covers the t-test, Wilcoxon rank-sum test, chi-squared test, one-way ANOVA with pairwise post-hoc tests, and two-way ANOVA for multiple grouping factors.
+
+📄 [View the video script](video_scripts/06_comparing_groups_script.md) · 🖼️ [Download slides (two groups)](../slides/07_compare_two.pdf) · [Download slides (3+ groups)](../slides/09_compare_over_two.pdf)

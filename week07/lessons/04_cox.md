@@ -65,4 +65,6 @@ A Cox model reports HR = 0.72 (p = 0.008) for a new treatment. Write a plain-lan
 
 ## Optional video
 
-Search YouTube for **"Cox proportional hazards regression explained"** — StatQuest has an accessible version (~10 min).
+A video (~8–9 min) walks through the slides for this lesson and covers hazard ratios, fitting a Cox model with `coxph()`, interpreting the output, and testing the proportional hazards assumption.
+
+📄 [View the video script](video_scripts/04_cox_script.md) · 🖼️ [Download the slides](../slides/04_cox.pdf)

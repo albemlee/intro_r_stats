@@ -63,4 +63,6 @@ A logistic regression reports exp(coef) = 1.46 for depression diagnosis (p < 0.0
 
 ## Optional video
 
-Search YouTube for **"logistic regression explained StatQuest"** (~10 min).
+A video (~10–12 min) walks through the slides for this lesson and covers fitting logistic regression, converting log-odds to odds ratios, interpreting multivariable models, and the likelihood ratio test.
+
+📄 [View the video script](video_scripts/02_logistic_regression_script.md) · 🖼️ [Download slides (overview)](../slides/04_logistic_regression_overview.pdf) · [Download slides (interpretation)](../slides/05_logistic_regression_interpretation.pdf)

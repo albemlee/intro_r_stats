@@ -1,7 +1,7 @@
 # Week 5 Assignment — Inferential Statistics
 
 **Due:** Before Week 6 session  
-**Submit:** One `.R` script + written conclusion (150–200 words)
+**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
 
 ---
 
@@ -15,17 +15,16 @@ Using your dataset from Weeks 3–4, identify a research question that can be an
 
 ### Task 1: State your hypotheses
 
-Write your null and alternative hypotheses in **plain language** (as comments in your R script).
+Write your null and alternative hypotheses in **plain language** in a prose section of your notebook.
 
 Example:
-```r
-# H₀: Male and female Gentoo penguins have the same mean flipper length
-# Hₐ: Male and female Gentoo penguins have different mean flipper lengths
-```
+
+> H₀: Male and female Gentoo penguins have the same mean flipper length  
+> Hₐ: Male and female Gentoo penguins have different mean flipper lengths
 
 ### Task 2: Check normality
 
-Run a histogram and Shapiro-Wilk test (if applicable) on the variable of interest. Document your decision about which test to use based on the result.
+Run a histogram and Shapiro-Wilk test (if applicable) on the variable of interest. In a prose section after the output, document your decision about which test to use based on the result.
 
 ### Task 3: Run the appropriate test
 
@@ -36,7 +35,7 @@ Choose and run the correct test based on your data type and normality check:
 
 ### Task 4: Written conclusion
 
-Write 150–200 words reporting:
+In a prose section at the end of your notebook, write 150–200 words reporting:
 - The test you used and why
 - The p-value
 - Your conclusion in plain language
@@ -46,4 +45,4 @@ Write 150–200 words reporting:
 
 ## Submission
 
-Submit your `.R` script and written conclusion via [LMS / email].
+Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week05_[your_last_name].Rmd`.

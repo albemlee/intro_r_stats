@@ -75,6 +75,50 @@ This is the key benefit: write the logic once, use it many times.
 
 ---
 
+## Packages: functions written by other people
+
+`print()`, `mean()`, and `sqrt()` come built into R, but most functions you will use in this course do not. They live in **packages** — collections of functions (and sometimes data) that someone else wrote and shared, so you don't have to write everything from scratch.
+
+Two separate steps are involved in using a package:
+
+1. **Install it** — download the package onto your computer. You only need to do this once.
+2. **Load it** — make its functions available in your current R session. You need to do this every time you start a new session.
+
+### Installing a package
+
+Use `install.packages()`, with the package name in quotes:
+
+```r
+install.packages("dplyr")
+```
+
+Run this in the Console (not in a script file you'll re-run often) — since it only needs to happen once per computer, there's no reason to install the package every time your script runs.
+
+### Loading a package
+
+Use `library()`, with the package name *without* quotes, at the top of your script:
+
+```r
+library(dplyr)
+```
+
+Once loaded, you can use any function the package provides:
+
+```r
+library(dplyr)
+
+# filter() is a function from the dplyr package
+filter(mtcars, mpg > 25)
+```
+
+If you try to use a package's function without loading it first, R will give you an error like `could not find function "filter"` — a sign you forgot the `library()` call.
+
+### Where do packages come from?
+
+Most packages are hosted on **CRAN** (the Comprehensive R Archive Network), which is what `install.packages()` downloads from by default. Throughout this course, you will regularly install and load packages like `dplyr`, `ggplot2`, and `tidyr`, which are part of a larger collection called the **tidyverse**.
+
+---
+
 ## Knowledge check
 
 What does the function below return when called with `evaluate_grade(85)`?
@@ -99,23 +143,3 @@ evaluate_grade <- function(grade) {
 </details>
 
 ---
-
-## Practice
-
-```r
-# Write a function called classify_bill that takes a bill_length_mm argument.
-# It should return "Long" if bill_length_mm > 43, and "Short" otherwise.
-
-# Your function definition here
-
-
-# Test your function with these values:
-classify_bill(39.1)   # should return "Short"
-classify_bill(47.5)   # should return "Long"
-```
-
----
-
-## Optional video
-
-Search YouTube for **"how to write functions in R"** (~8 min).

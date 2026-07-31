@@ -84,20 +84,3 @@ y <- 2 < 1
 </details>
 
 ---
-
-## Practice
-
-```r
-# Write an if/else that prints "High" if a penguin's bill length is greater than 45mm,
-# and "Low" otherwise.
-
-bill_length <- 47.5
-
-# Your code here
-```
-
----
-
-## Optional video
-
-Search YouTube for **"R if else statements tutorial"** (~6 min).

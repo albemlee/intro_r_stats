@@ -100,3 +100,11 @@ library(palmerpenguins)
 #    species, island, and bill_length_mm
 # Your code here
 ```
+
+---
+
+## Optional video
+
+A short video (~7–9 min) walks through the slides for this lesson and covers tibble subsetting behavior, `select()` for columns, `filter()` for rows, and how to chain them with the pipe.
+
+📄 [View the video script](video_scripts/03_subset_script.md) · 🖼️ [Download the slides](../slides/03_subset.pdf)

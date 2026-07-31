@@ -110,4 +110,6 @@ library(palmerpenguins)
 
 ## Optional video
 
-Search YouTube for **"ggplot2 tutorial for beginners R"** (~10–15 min) — StatQuest has an accessible research-oriented version.
+A short video (~7–8 min) walks through the slides for this lesson and covers the Grammar of Graphics, the three components of every ggplot2 plot, and how to build histograms, scatter plots, and bar charts.
+
+📄 [View the video script](video_scripts/02_ggplot_script.md) · 🖼️ [Download the slides](../slides/02_ggplot.pdf)

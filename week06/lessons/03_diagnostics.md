@@ -59,3 +59,11 @@ You fit a linear regression and the residuals vs. fitted plot shows a clear fan 
 **Heteroscedasticity** — the variance of the residuals is not constant across fitted values. This violates a key assumption of linear regression. Options include transforming the outcome variable (e.g., log transformation) or using a model that handles non-constant variance.
 
 </details>
+
+---
+
+## Optional video
+
+A video (~7–8 min) walks through the slides for this lesson and covers residual plots for linear regression, detecting and interpreting heteroscedasticity, and checking multicollinearity with VIF.
+
+📄 [View the video script](video_scripts/03_diagnostics_script.md) · 🖼️ [Download slides (linear diagnostic)](../slides/03_linear_regression_diagnostic.pdf) · [Download slides (other diagnostics)](../slides/06_other_regression_diagnostics.pdf)

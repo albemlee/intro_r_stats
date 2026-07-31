@@ -92,3 +92,11 @@ library(palmerpenguins)
 # 3. Create a faceted histogram of body_mass_g by species
 # Your code here
 ```
+
+---
+
+## Optional video
+
+A short video (~6–7 min) walks through the slides for this lesson and covers histograms, choosing between mean/SD and the five-number summary, computing group summaries, faceting, and a bonus demo of `ggpairs()` for lazy data exploration.
+
+📄 [View the video script](video_scripts/04_continuous_script.md) · 🖼️ [Download the slides](../slides/04_continuous.pdf) · [Bonus: lazy exploration](../slides/05_lazy_exploration.pdf)

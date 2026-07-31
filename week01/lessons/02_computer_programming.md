@@ -14,7 +14,7 @@ Here is something worth sitting with: **computers include humans.** When you wri
 
 An **R script** is a plain text file (ending in `.R`) that contains a sequence of R commands. You write commands in the Script editor and run them — either line by line or all at once.
 
-Here is an example of a well-written R script:
+Here is an example of a R script:
 
 ```r
 # Calculate the average age of patients in our study
@@ -28,7 +28,6 @@ print(mean_age)
 Notice:
 - Lines starting with `#` are **comments** — R ignores them, but humans read them
 - Variable names are descriptive (`patient_ages`, not `x`)
-- Each step does one clear thing
 
 ---
 
@@ -64,7 +63,3 @@ Open a new R script in RStudio (File → New File → R Script). Write three lin
 Save the file as `practice.R`.
 
 ---
-
-## Optional video
-
-Search YouTube for **"R scripts for beginners"** (~5–8 min) to see the Script editor and Console in action.

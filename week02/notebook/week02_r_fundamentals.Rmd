@@ -1,119 +1,6 @@
----
-title: "Week 2 — R Programming Fundamentals"
-author: "Your Name"
-date: "`r Sys.Date()`"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Objects
-
-Run this chunk and observe the Environment pane (top right) as each object is created.
-
-```{r objects-demo}
-# Assign values to objects
-x <- 3 + 5
-x <- x - 4
-y <- x + 1
-
-print(x)
-print(y)
-```
-
-**Question:** What are the values of `x` and `y`? Did the result match your prediction from the reading?
-
-*Your answer here:*
-
----
-
-### 🔨 Exercise: Objects
-
-```{r objects-exercise}
-# 1. Create an object called bill_length_mm with the value 45.1
-# Your code here
-
-# 2. Convert it to centimetres and store in bill_length_cm
-# Your code here
-
-# 3. Print both
-# Your code here
-```
-
----
-
-## Conditions
-
-```{r conditions-demo}
-# Basic if/else
-grade <- 85
-
-if (grade >= 90) {
-  print("A")
-} else if (grade >= 80) {
-  print("B")
-} else if (grade >= 70) {
-  print("C")
-} else {
-  print("Below passing")
-}
-```
-
-```{r booleans-demo}
-# Boolean expressions
-x <- 1 == 1    # TRUE or FALSE?
-y <- 2 < 1     # TRUE or FALSE?
-print(x)
-print(y)
-```
-
----
-
-### 🔨 Exercise: Conditions
-
-```{r conditions-exercise}
-# Write an if/else that prints "Long bill" if bill_length_mm > 43, "Short bill" otherwise
-bill_length_mm <- 47.5
-
-# Your code here
-```
-
----
-
-## Loops
-
-```{r loops-demo}
-# A for loop evaluating each grade
-grades <- c(78, 92, 65, 88, 71)
-
-for (grade in grades) {
-  if (grade >= 70) {
-    print(paste(grade, "— Pass"))
-  } else {
-    print(paste(grade, "— Fail"))
-  }
-}
-```
-
----
-
-### 🔨 Exercise: Loops
-
-```{r loops-exercise}
-# Bill lengths for 6 penguins
-bill_lengths <- c(39.1, 45.2, 36.7, 50.3, 42.8, 31.1)
-
-# Write a for loop that prints "Long" if > 43, "Short" otherwise
-# Your code here
-```
-
----
-
 ## Functions
 
-```{r functions-demo}
+```{r}
 # Define a function
 classify_bill <- function(bill_length_mm) {
   if (bill_length_mm > 43) {
@@ -130,9 +17,21 @@ classify_bill(47.5)
 
 ---
 
-### 🔨 Exercise: Functions
+### 🔨 Exercises: Functions
 
-```{r functions-exercise}
+```{r}
+# Write a function called classify_bill that takes a bill_length_mm argument.
+# It should return "Long" if bill_length_mm > 43, and "Short" otherwise.
+
+# Your function definition here
+
+
+# Test your function with these values:
+classify_bill(39.1)   # should return "Short"
+classify_bill(47.5)   # should return "Long"
+```
+
+```{r}
 # Write a function called evaluate_grade that takes a grade argument
 # and returns "Pass" if >= 70, "Fail" otherwise
 
@@ -148,7 +47,7 @@ classify_bill(47.5)
 
 ## Vectors and Data Frames
 
-```{r vectors-demo}
+```{r}
 # Vectors
 species <- c("Adelie", "Chinstrap", "Gentoo")
 bill_lengths <- c(39.1, 46.5, 47.3)
@@ -158,7 +57,7 @@ bill_lengths_cm <- bill_lengths / 10
 print(bill_lengths_cm)
 ```
 
-```{r dataframe-demo}
+```{r}
 # Create a data frame
 penguin_df <- data.frame(
   species      = species,
@@ -172,7 +71,24 @@ penguin_df$species
 
 ---
 
-### 🔨 Exercise: Grade Calculator (put it all together)
+### 🔨 Exercise: Vectors and Data Frames
+
+```r
+# 1. Create a vector called flipper_lengths with these values: 181, 186, 195, 193, 190
+# Your code here
+
+# 2. Add 2mm to every flipper length in one line
+# Your code here
+
+# 3. Create a data frame called penguin_df with columns:
+#    - species: c("Adelie", "Adelie", "Chinstrap")
+#    - bill_length: c(39.1, 38.7, 46.5)
+#    - flipper_length: c(181, 186, 195)
+# Your code here
+
+# 4. Print the species column using $
+# Your code here
+```
 
 ```{r grade-calculator}
 # Stage 1: Create a vector of 5 student grades

@@ -86,21 +86,3 @@ for (i in 1:6) {
 </details>
 
 ---
-
-## Practice
-
-```r
-# The vector below contains bill lengths (mm) for 6 penguins.
-bill_lengths <- c(39.1, 45.2, 36.7, 50.3, 42.8, 31.1)
-
-# Write a for loop that prints "Long bill" if bill_length > 43,
-# and "Short bill" otherwise.
-
-# Your code here
-```
-
----
-
-## Optional video
-
-Search YouTube for **"for loops in R tutorial"** (~6–8 min).

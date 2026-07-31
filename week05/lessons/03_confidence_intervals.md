@@ -58,3 +58,13 @@ A study reports a 95% CI for mean age at diagnosis as (52.3, 58.7). What does th
 We are 95% confident the true mean age at diagnosis in the population lies between 52.3 and 58.7 years. The interval, not the point estimate alone, is the appropriate summary of our uncertainty.
 
 </details>
+
+---
+
+## Optional video
+
+A short video (~6–7 min) walks through the slides for this lesson and covers the two interpretations of a confidence interval and how to compute one from a bootstrap standard error.
+
+📄 [View the video script](video_scripts/03_confidence_intervals_script.md) · 🖼️ [Download the slides](../slides/04_confidence_interval.pdf)
+
+</details>

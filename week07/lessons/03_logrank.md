@@ -42,3 +42,11 @@ A log rank test returns p = 0.0002 at a significance level of 0.05. What is your
 Reject the null hypothesis. There is a statistically significant difference in survival between the groups. The probability of observing this or a more extreme result if the groups had equal survival is 0.02%.
 
 </details>
+
+---
+
+## Optional video
+
+A short video (~5–6 min) walks through the slides for this lesson and covers the log rank test hypotheses, running `survdiff()` in R, and interpreting the output.
+
+📄 [View the video script](video_scripts/03_logrank_script.md) · 🖼️ [Download the slides](../slides/03_logrank.pdf)

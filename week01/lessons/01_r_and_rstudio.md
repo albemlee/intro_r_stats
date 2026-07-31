@@ -2,11 +2,11 @@
 
 ## What are R and RStudio?
 
-**R** is a programming language designed for statistical computing and data analysis. It is free, open-source, and widely used across biomedical research, epidemiology, and data science. When you write R code, you are giving a computer a precise set of instructions — and R carries them out.
+**R** is a programming language designed for statistical computing and data analysis. It is free, open-source, and widely used across biomedical research, epidemiology, and data science. When you write R code, you are giving a computer a precise set of instructions.
 
 **RStudio** is an Integrated Development Environment, or **IDE**. Think of it this way:
 
-> R is the engine. RStudio is the dashboard.
+> R is English. RStudio is Microsoft Word or Google docs.
 
 You need both installed on your computer. R does the computing; RStudio gives you a comfortable environment to write, run, and organize your code.
 
@@ -47,7 +47,3 @@ Both are excellent languages for data science. Our recommendation: **choose the 
 </details>
 
 ---
-
-## Optional video
-
-Search YouTube for **"R vs RStudio — What's the Difference?"** (any recent explainer, ~5 min) for a visual walkthrough of both tools before your first session.

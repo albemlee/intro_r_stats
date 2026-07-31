@@ -49,3 +49,11 @@ A KM curve shows two groups. Group A's line stays near 0.8 survival probability 
 In this sample, Group A has better survival — a higher proportion remain event-free over the 24-month period. This is a descriptive observation from the sample; inferential tests (log rank, Cox) are needed to assess whether the difference is statistically significant.
 
 </details>
+
+---
+
+## Optional video
+
+A short video (~6–7 min) walks through the slides for this lesson and covers how to read a Kaplan-Meier curve, what crossing curves signal, and how to fit and plot a KM curve in R using the `survival` package.
+
+📄 [View the video script](video_scripts/02_kaplan_meier_script.md) · 🖼️ [Download the slides](../slides/02_kaplan_meier.pdf)
