@@ -38,30 +38,29 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 
 ## Course map
 
-### Week 1 — Setup, Tools, and Orientation
-*Install R, RStudio, and the tidyverse. Introduction to UCSF ChatGPT Enterprise.*
+### Week 1 — Setup, Tools, and R Basics
+*Install R, RStudio, and the tidyverse. Objects, conditions, and loops. Introduction to UCSF ChatGPT Enterprise.*
 
 | Lessons |
 |---------|
 | [R and RStudio](week01/lessons/01_r_and_rstudio.md) |
 | [Computer Programming](week01/lessons/02_computer_programming.md) |
-| [UCSF ChatGPT Enterprise](week01/lessons/03_chatgpt_enterprise.md) |
+| [Objects](week01/lessons/03_objects.md) |
+| [Conditions](week01/lessons/04_conditions.md) |
+| [Loops](week01/lessons/05_loops.md) |
 
-**Notebook:** [Week 1 Notebook](week01/notebook/week01_setup.Rmd)  
+**Supplement:** [UCSF ChatGPT Enterprise](week01/supplement/chatgpt_enterprise.md)  
 **Assignment:** [Week 1 Assignment](week01/assignment.md)
 
 ---
 
-### Week 2 — R Programming Fundamentals
-*Objects, conditions, loops, functions, vectors, matrices, data frames.*
+### Week 2 — Functions and Data Structures
+*Functions, vectors, matrices, data frames.*
 
 | Lessons |
 |---------|
-| [Objects](week02/lessons/01_objects.md) |
-| [Conditions](week02/lessons/02_conditions.md) |
-| [Loops](week02/lessons/03_loops.md) |
-| [Functions](week02/lessons/04_functions.md) |
-| [Vectors, Matrices, and Data Frames](week02/lessons/05_data_structures.md) |
+| [Functions](week02/lessons/01_functions.md) |
+| [Vectors, Matrices, and Data Frames](week02/lessons/02_data_structures.md) |
 
 **Notebook:** [Week 2 Notebook](week02/notebook/week02_r_fundamentals.Rmd)  
 **Assignment:** [Week 2 Assignment](week02/assignment.md)

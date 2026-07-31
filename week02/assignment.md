@@ -7,7 +7,7 @@
 
 ## Instructions
 
-Write a single R Markdown notebook that does all of the following. Your notebook must knit without errors.
+Write a single R Markdown notebook that does all of the following.
 
 Use prose sections (outside of code chunks) to explain your thinking where indicated.
 
