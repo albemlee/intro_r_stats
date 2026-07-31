@@ -19,10 +19,9 @@ Every week follows the same pattern:
 | Step | What | Where |
 |------|------|--------|
 | 1 | Read the lesson(s) for the week | `weekXX/lessons/` |
-| 2 | Download and run the Rmd notebook | `weekXX/notebook/` |
-| 3 | Complete the comprehension check | Submitted before class |
-| 4 | Attend the 90-minute session | In person |
-| 5 | Complete the assignment | `weekXX/assignment.md` |
+| 2 | Follow along if there is a notebook | `weekXX/notebook/
+| 3 | Attend the 90-minute session | In person |
+| 4 | Complete the assignment | `weekXX/assignment.md` |
 
 ---
 
@@ -176,10 +175,6 @@ The original workshops covered:
 
 These materials were used as source content. Claude helped restructure them into a flipped/reverse-classroom format suitable for a credit-bearing 8-week course — producing student-facing lesson notes in Markdown, Rmd notebooks, comprehension checks, weekly assignments, and instructor guidance for each week.
 
-The full transcript of the Claude conversation used to develop these materials is included in this repository:
-
-- [`claude_interactions/`](claude_interactions/) — exported chat logs (JSON format) of Claude sessions used to plan and generate course content
-
 ---
 
 ## License
@@ -194,5 +189,3 @@ You are free to share and adapt these materials for any purpose, including comme
 
 - [R for Data Science](https://r4ds.hadley.nz/) — free online book, the definitive tidyverse reference
 - [R Graph Gallery](https://r-graph-gallery.com/) — ready-to-run ggplot2 code for dozens of plot types
-- [StatQuest with Josh Starmer](https://www.youtube.com/@statquest) — clear visual explanations of statistical concepts
-- [CRAN Task Views](https://cran.r-project.org/web/views/) — curated R packages by research domain
