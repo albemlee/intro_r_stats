@@ -1,18 +1,20 @@
 ---
 title: "Week 6 — Linear and Logistic Regression"
 author: "Your Name"
-date: "`r Sys.Date()`"
-output: html_document
 ---
 
 ```{r setup, message=FALSE}
 library(tidyverse)
-library(palmerpenguins)
 ```
 
-> **Note:** The lesson slides use the HRS (Health and Retirement Study) dataset.  
-> This notebook uses the Palmer Penguins dataset so no additional data download is needed.  
-> Replace with your own dataset for your final project.
+## Data
+
+This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
+
+```{r load-data}
+hrs_df <- read_csv("hrs/hrs_analyze.csv")
+glimpse(hrs_df)
+```
 
 ---
 
@@ -21,15 +23,15 @@ library(palmerpenguins)
 ### Data check — is the outcome continuous and roughly normal?
 
 ```{r outcome-check}
-# We'll predict body_mass_g from flipper_length_mm
-penguins %>%
-  drop_na(body_mass_g) %>%
-  ggplot(aes(x = body_mass_g)) +
+# We'll predict systolic blood pressure (bp_sys) from diastolic blood pressure (bp_dia)
+hrs_df %>%
+  drop_na(bp_sys) %>%
+  ggplot(aes(x = bp_sys)) +
     geom_histogram(bins = 30) +
-    labs(title = "Distribution of body mass (outcome variable)")
+    labs(title = "Distribution of systolic blood pressure (outcome variable)")
 ```
 
-**Question:** Does `body_mass_g` look approximately normal? Is linear regression appropriate?
+**Question:** Does `bp_sys` look approximately normal? Is linear regression appropriate?
 
 *Your answer here:*
 
@@ -38,13 +40,13 @@ penguins %>%
 ### Fit the model
 
 ```{r linear-model}
-penguins_clean <- penguins %>% drop_na(body_mass_g, flipper_length_mm, sex, species)
+hrs_clean <- hrs_df %>% drop_na(bp_sys, bp_dia, age_2014, female, depress_dx, bp_dx)
 
-model_linear <- glm(body_mass_g ~ flipper_length_mm, data = penguins_clean)
+model_linear <- glm(bp_sys ~ bp_dia, data = hrs_clean)
 summary(model_linear)
 ```
 
-**Interpret the `flipper_length_mm` coefficient in plain language:**
+**Interpret the `bp_dia` coefficient in plain language:**
 
 *Your interpretation here (include: predictor, outcome, direction, magnitude, significance):*
 
@@ -53,7 +55,7 @@ summary(model_linear)
 ### Multivariable linear regression
 
 ```{r multivariable-linear}
-model_multi <- glm(body_mass_g ~ flipper_length_mm + species + sex, data = penguins_clean)
+model_multi <- glm(bp_sys ~ bp_dia + age_2014 + female, data = hrs_clean)
 summary(model_multi)
 ```
 
@@ -80,17 +82,13 @@ plot(model_multi, which = 2)   # QQ plot
 ## Logistic Regression
 
 ```{r logistic-setup}
-# Create a binary outcome: is the penguin above median mass?
-median_mass <- median(penguins_clean$body_mass_g)
-penguins_clean <- penguins_clean %>%
-  mutate(heavy = as.integer(body_mass_g > median_mass))
-
-table(penguins_clean$heavy)
+# Depression diagnosis (depress_dx) is already a binary 0/1 outcome
+table(hrs_clean$depress_dx)
 ```
 
 ```{r logistic-model}
-model_logistic <- glm(heavy ~ flipper_length_mm + species,
-                      family = binomial, data = penguins_clean)
+# Predict depression diagnosis from hypertension diagnosis
+model_logistic <- glm(depress_dx ~ bp_dx, family = binomial, data = hrs_clean)
 summary(model_logistic)
 ```
 
@@ -99,7 +97,7 @@ summary(model_logistic)
 exp(coef(model_logistic))
 ```
 
-**Interpret the odds ratio for `flipper_length_mm`:**
+**Interpret the odds ratio for `bp_dx`:**
 
 *Your interpretation here (include: predictor, outcome, OR value, direction, significance):*
 

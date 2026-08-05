@@ -45,8 +45,6 @@ A study finds no significant difference in blood pressure between a treatment an
 
 ---
 
-## Optional video
+## Slides
 
-A video (~7–8 min) walks through the slides for this lesson and covers Type I and Type II errors, choosing a significance level, statistical power, and how to read chi-squared test output.
-
-📄 [View the video script](video_scripts/07_errors_script.md) · 🖼️ [Download the slides](../slides/08_errors.pdf)
+🖼️ [Download the slides](../slides/08_errors.pdf)

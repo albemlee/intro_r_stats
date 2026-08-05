@@ -3,6 +3,8 @@
 **Due:** Before Week 8 presentations  
 **This is not a traditional assignment — it is your final project checklist.**
 
+See the [Final Project](../week08/final_project.md) for the full project description (dataset sources, step-by-step instructions, video content guide, deliverables, and AI use policy). This page is just the checklist confirming you're on track.
+
 ---
 
 ## Final project checklist
@@ -17,13 +19,13 @@ Complete all items before the Week 8 session.
 
 ### Video
 - [ ] 2-minute screen-capture video recorded
-- [ ] Video covers all required sections (see below)
+- [ ] Video covers all required sections (see "Need the details?" below)
 - [ ] Video uploaded to YouTube, UCSF OneDrive, or Media@UCSF
 - [ ] Video link tested in a private/incognito browser window
 
 ### Code
 - [ ] Public GitHub repository created
-- [ ] All `.Rmd` notebooks in the repository and knit without errors
+- [ ] All `.Rmd` notebooks in the repository run without errors
 - [ ] Notebooks include prose explanations alongside code chunks
 - [ ] If AI tools were used: `prompts.txt` file in the repo with all prompts used, and a note in the README
 
@@ -32,24 +34,8 @@ Complete all items before the Week 8 session.
 
 ---
 
-## Video content guide
+## Need the details?
 
-Your 2-minute video should cover:
-
-1. **Who are you?** (brief intro)
-2. **Dataset:** What is it? Why was it collected? How was the data collected? What's included and excluded?
-3. **Descriptive insight:** What technique did you apply? What's one interesting finding? Include a visualization.
-4. **Inferential insight:** What technique did you apply? How do you interpret the results? Include a visualization.
-
-**Maximum duration: 2 minutes.** This constraint is intentional — practice editing.
-
-**Recommended tools:** [Zoom Record](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0059856) or [Zoom Clips](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0057723)
-
----
-
-## Dataset sources
-
-- [Kaggle](https://www.kaggle.com/datasets)
-- [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
-- [data.gov](https://data.gov/)
-- [Dataset ideas from 2023 PROPEL cohort](https://ucsf.box.com/s/xj4j554yx9belxmdswdocatqt1gmb9ri)
+- Video content guide, recommended recording tools, and duration limit → [Final Project: Step 4](../week08/final_project.md#step-4-create-a-2-minute-video)
+- Dataset sources → [Final Project: Step 1](../week08/final_project.md#step-1-select-a-dataset)
+- Deliverables and AI use policy → [Final Project: Deliverables](../week08/final_project.md#deliverables) and [AI use policy](../week08/final_project.md#ai-use-policy)

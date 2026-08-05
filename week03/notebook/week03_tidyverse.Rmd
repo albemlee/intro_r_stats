@@ -31,6 +31,19 @@ penguins[["species"]] |> head(10)
 penguins$species |> head(10)
 ```
 
+### 🔨 Exercise: Tibbles
+
+```{r tibble-exercise}
+# 1. Print the penguins tibble and identify how many rows and columns it has
+penguins
+
+# 2. Extract the bill_length_mm column as a vector using $
+# Your code here
+
+# 3. Extract the first 5 rows of bill_length_mm as a tibble using [ ]
+# Your code here
+```
+
 ---
 
 ## The Pipe and Tidyverse Verbs
@@ -72,14 +85,14 @@ penguins %>%
 ### 🔨 Exercise: select() and filter()
 
 ```{r subset-exercise}
-# 1. Select only species, island, and body_mass_g
+# 1. Select only the species, island, and sex columns
 # Your code here
 
-# 2. Filter to female penguins only
+# 2. Filter to only female penguins
 # Your code here
 
-# 3. Filter to Adelie penguins on Torgersen island,
-#    keeping only species, island, and bill_length_mm
+# 3. Filter to Chinstrap penguins on Dream island, keeping only
+#    species, island, and bill_length_mm
 # Your code here
 ```
 
@@ -98,10 +111,13 @@ penguins %>%
 ### 🔨 Exercise: mutate()
 
 ```{r mutate-exercise}
-# 1. Add a column is_large_penguin (TRUE if body_mass_g > 4500)
+# 1. Add a column called flipper_length_cm (flipper_length_mm / 10)
 # Your code here
 
-# 2. Filter to Adelie penguins, then add bill_ratio (bill_length_mm / bill_depth_mm)
+# 2. Add a column called is_large_penguin that is TRUE if body_mass_g > 4500
+# Your code here
+
+# 3. Chain: filter to Adelie penguins, then add bill_ratio (bill_length_mm / bill_depth_mm)
 # Your code here
 ```
 
@@ -123,10 +139,13 @@ penguins %>%
 ### 🔨 Exercise: group_by() and summarize()
 
 ```{r summarize-exercise}
-# 1. Compute count and mean flipper_length_mm per island
+# 1. Compute the number of penguins and mean flipper length per island
 # Your code here
 
-# 2. Filter to non-missing sex, then compute mean body mass per species AND sex
+# 2. Compute the min and max bill_length_mm per species
+# Your code here
+
+# 3. Filter to non-missing sex, then compute mean body mass per species AND sex
 # Your code here
 ```
 
@@ -152,7 +171,10 @@ nrow(joined)      # rows after — should be the same
 ### 🔨 Exercise: Joins
 
 ```{r join-exercise}
-# Does an inner_join give the same number of rows? Why or why not?
+# 1. Why does the left_join above keep the same number of rows as `penguins`?
+# Your answer here (as a comment):
+
+# 2. Does an inner_join give the same number of rows? Why or why not?
 penguins %>%
   inner_join(island_info, by = "island") %>%
   nrow()

@@ -1,7 +1,7 @@
 # Week 2 Assignment — R Programming Fundamentals
 
 **Due:** Before Week 3 session  
-**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
+**Submit:** One `.Rmd` notebook
 
 ---
 
@@ -84,4 +84,4 @@ print(result)
 
 ## Submission
 
-Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week02_[your_last_name].Rmd`.
+Submit your `.Rmd` file via [LMS / email]. Name it `week02_[your_last_name].Rmd`.

@@ -1,7 +1,7 @@
 # Week 5 Assignment — Inferential Statistics
 
 **Due:** Before Week 6 session  
-**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
+**Submit:** One `.Rmd` notebook
 
 ---
 
@@ -9,7 +9,7 @@
 
 Using your dataset from Weeks 3–4, identify a research question that can be answered with a hypothesis test.
 
-> 💡 This written conclusion will become the inferential statistics section of your final project. Save it.
+> 💡 This written conclusion can become the inferential statistics section of your final project. Save it.
 
 ---
 
@@ -24,7 +24,7 @@ Example:
 
 ### Task 2: Check normality
 
-Run a histogram and Shapiro-Wilk test (if applicable) on the variable of interest. In a prose section after the output, document your decision about which test to use based on the result.
+Run a histogram and/or Shapiro-Wilk test (if applicable) on the variable of interest. In a prose section after the output, document your decision about which test to use based on the result.
 
 ### Task 3: Run the appropriate test
 
@@ -45,4 +45,4 @@ In a prose section at the end of your notebook, write 150–200 words reporting:
 
 ## Submission
 
-Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week05_[your_last_name].Rmd`.
+Submit your `.Rmd` file via [LMS / email]. Name it `week05_[your_last_name].Rmd`.

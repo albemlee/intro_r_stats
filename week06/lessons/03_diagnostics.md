@@ -14,6 +14,8 @@ For a well-fitting linear model:
 - Residuals should be approximately normally distributed (mean ≈ 0)
 - Residuals should not be correlated with predicted values (no pattern in the residuals vs. fitted plot)
 
+> **Data source:** This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
+
 ```r
 # Fit model
 model <- glm(bp_sys ~ bp_dia + age + female, data = hrs_df)
@@ -62,8 +64,6 @@ You fit a linear regression and the residuals vs. fitted plot shows a clear fan 
 
 ---
 
-## Optional video
+## Slides
 
-A video (~7–8 min) walks through the slides for this lesson and covers residual plots for linear regression, detecting and interpreting heteroscedasticity, and checking multicollinearity with VIF.
-
-📄 [View the video script](video_scripts/03_diagnostics_script.md) · 🖼️ [Download slides (linear diagnostic)](../slides/03_linear_regression_diagnostic.pdf) · [Download slides (other diagnostics)](../slides/06_other_regression_diagnostics.pdf)
+🖼️ [Download slides (linear diagnostic)](../slides/03_linear_regression_diagnostic.pdf) · [Download slides (other diagnostics)](../slides/06_other_regression_diagnostics.pdf)

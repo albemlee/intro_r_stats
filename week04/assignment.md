@@ -1,7 +1,7 @@
 # Week 4 Assignment — Descriptive Statistics and Visualization
 
 **Due:** Before Week 5 session  
-**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
+**Submit:** One `.Rmd` notebook
 
 ---
 
@@ -44,4 +44,4 @@ Your written observations for Tasks 1–3 should total **200–300 words**.
 
 ## Submission
 
-Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week04_[your_last_name].Rmd`.
+Submit your `.Rmd` file via [LMS / email]. Name it `week04_[your_last_name].Rmd`.

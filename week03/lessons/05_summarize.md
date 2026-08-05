@@ -72,28 +72,3 @@ penguins %>%
 
 </details>
 
----
-
-## Practice
-
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Compute the number of penguins and mean flipper length per island
-# Your code here
-
-# 2. Compute the min and max bill_length_mm per species
-# Your code here
-
-# 3. Filter to non-missing sex, then compute mean body mass per species AND sex
-# Your code here
-```
-
----
-
-## Optional video
-
-A short video (~7–8 min) walks through the slides for this lesson and covers `group_by()`, `summarize()`, grouping by multiple variables, and why `summarize()` and `mutate()` are not interchangeable.
-
-📄 [View the video script](video_scripts/05_summarize_script.md) · 🖼️ [Download the slides](../slides/05_summarize.pdf)

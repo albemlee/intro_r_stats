@@ -66,27 +66,6 @@ The **Bonferroni correction** adjusts the significance threshold to account for 
 
 ---
 
-## Practice
+## Slides
 
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Check normality of flipper_length_mm for Adelie penguins (histogram + Shapiro-Wilk)
-# Your code here
-
-# 2. Based on the result, run the appropriate test to compare flipper length
-#    between male and female Adelie penguins
-# Your code here
-
-# 3. State H₀, Hₐ, your p-value, and your conclusion in plain language
-# (Write as a comment in your R script)
-```
-
----
-
-## Optional video
-
-A video (~10–12 min) walks through the slides for this lesson and covers the t-test, Wilcoxon rank-sum test, chi-squared test, one-way ANOVA with pairwise post-hoc tests, and two-way ANOVA for multiple grouping factors.
-
-📄 [View the video script](video_scripts/06_comparing_groups_script.md) · 🖼️ [Download slides (two groups)](../slides/07_compare_two.pdf) · [Download slides (3+ groups)](../slides/09_compare_over_two.pdf)
+🖼️ [Download slides (two groups)](../slides/07_compare_two.pdf) · [Download slides (3+ groups)](../slides/09_compare_over_two.pdf)

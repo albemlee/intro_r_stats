@@ -9,6 +9,8 @@
 
 In this project, you will apply data manipulation and statistics to analyze a dataset of your choosing and present your findings in a short video.
 
+Work on this project throughout Weeks 3–7 as each relevant skill is introduced. Before the Week 8 session, complete the [Week 7 checklist](../week07/assignment.md) to confirm you're on track.
+
 ---
 
 ## Step 1: Select a dataset
@@ -55,7 +57,7 @@ Recommended: [Zoom Record](https://support.zoom.com/hc/en/article?id=zm_kb&syspa
 
 | Deliverable | Details |
 |-------------|---------|
-| **GitHub repository** | Public repo with all `.Rmd` notebooks (must knit without errors). [How to create one](https://docs.github.com/en/get-started/start-your-journey/hello-world) |
+| **GitHub repository** | Public repo with all `.Rmd` notebooks (must run without errors). [How to create one](https://docs.github.com/en/get-started/start-your-journey/hello-world) |
 | **Video** | Uploaded to YouTube, UCSF OneDrive, or Media@UCSF |
 | **Links** | Submit both links in the provided table before Week 8 |
 

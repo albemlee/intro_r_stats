@@ -66,28 +66,3 @@ Use `mutate()` when you want to add or change a column row by row.
 
 </details>
 
----
-
-## Practice
-
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Add a column called flipper_length_cm (flipper_length_mm / 10)
-# Your code here
-
-# 2. Add a column called is_large_penguin that is TRUE if body_mass_g > 4500
-# Your code here
-
-# 3. Chain: filter to Adelie penguins, then add bill_ratio (bill_length_mm / bill_depth_mm)
-# Your code here
-```
-
----
-
-## Optional video
-
-A short video (~6–7 min) walks through the slides for this lesson and covers creating new columns, modifying existing ones, and the key difference between `mutate()` and `summarize()`.
-
-📄 [View the video script](video_scripts/04_mutate_script.md) · 🖼️ [Download the slides](../slides/04_mutate.pdf)

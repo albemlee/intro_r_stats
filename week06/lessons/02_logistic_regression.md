@@ -13,6 +13,8 @@ Use logistic regression when your dependent variable is **binary** (yes/no, 0/1,
 
 ## Fitting a logistic model
 
+> **Data source:** This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
+
 ```r
 # Predict depression diagnosis from hypertension diagnosis
 model <- glm(depress_dx ~ bp_dx, family = binomial, data = hrs_df)
@@ -61,8 +63,6 @@ A logistic regression reports exp(coef) = 1.46 for depression diagnosis (p < 0.0
 
 ---
 
-## Optional video
+## Slides
 
-A video (~10–12 min) walks through the slides for this lesson and covers fitting logistic regression, converting log-odds to odds ratios, interpreting multivariable models, and the likelihood ratio test.
-
-📄 [View the video script](video_scripts/02_logistic_regression_script.md) · 🖼️ [Download slides (overview)](../slides/04_logistic_regression_overview.pdf) · [Download slides (interpretation)](../slides/05_logistic_regression_interpretation.pdf)
+🖼️ [Download slides (overview)](../slides/04_logistic_regression_overview.pdf) · [Download slides (interpretation)](../slides/05_logistic_regression_interpretation.pdf)

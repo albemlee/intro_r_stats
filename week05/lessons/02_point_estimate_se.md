@@ -66,8 +66,6 @@ Standard error is the inferential counterpart to standard deviation.
 
 ---
 
-## Optional video
+## Slides
 
-A video (~8–9 min) walks through the slides for this lesson and covers point estimates, the critical role of sampling design, and how to calculate standard error via bootstrapping.
-
-📄 [View the video script](video_scripts/02_point_estimate_se_script.md) · 🖼️ [Download slides (point estimate)](../slides/02_point_estimate.pdf) · [Download slides (standard error)](../slides/03_standard_error.pdf)
+🖼️ [Download slides (point estimate)](../slides/02_point_estimate.pdf) · [Download slides (standard error)](../slides/03_standard_error.pdf)

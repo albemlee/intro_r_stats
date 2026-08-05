@@ -1,8 +1,6 @@
 ---
 title: "Week 5 — Inferential Statistics and Hypothesis Testing"
 author: "Your Name"
-date: "`r Sys.Date()`"
-output: html_document
 ---
 
 ```{r setup, message=FALSE}
@@ -101,6 +99,20 @@ t.test(flipper_length_mm ~ sex, data = gentoo_sex)
 *p-value:*  
 *Conclusion:*  
 *Possible error type:*
+
+### 🔨 Exercise: Comparing Groups
+
+```{r comparing-groups-exercise}
+# 1. Check normality of flipper_length_mm for Adelie penguins (histogram + Shapiro-Wilk)
+# Your code here
+
+# 2. Based on the result, run the appropriate test to compare flipper length
+#    between male and female Adelie penguins
+# Your code here
+
+# 3. State H₀, Hₐ, your p-value, and your conclusion in plain language
+# (Write as a comment)
+```
 
 ---
 

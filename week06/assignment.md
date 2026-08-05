@@ -1,7 +1,7 @@
 # Week 6 Assignment — Regression Analysis
 
 **Due:** Before Week 7 session  
-**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
+**Submit:** One `.Rmd` notebook
 
 ---
 
@@ -9,7 +9,7 @@
 
 Using your dataset, fit and interpret a regression model. Choose the model type based on your outcome variable.
 
-> 💡 This written paragraph will become the regression section of your final project. Save it.
+> 💡 This written paragraph can become the regression section of your final project. Save it.
 
 ---
 
@@ -52,4 +52,4 @@ Include a final prose section (150–200 words) summarizing:
 
 ## Submission
 
-Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week06_[your_last_name].Rmd`.
+Submit your `.Rmd` file via [LMS / email]. Name it `week06_[your_last_name].Rmd`.

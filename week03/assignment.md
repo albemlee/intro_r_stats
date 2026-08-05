@@ -1,7 +1,7 @@
 # Week 3 Assignment — Data Manipulation with the Tidyverse
 
 **Due:** Before Week 4 session  
-**Submit:** One `.Rmd` notebook (knitted to HTML or PDF)
+**Submit:** One `.Rmd` notebook
 
 ---
 
@@ -47,4 +47,4 @@ Include a short prose section (2–3 sentences) in your notebook describing:
 
 ## Submission
 
-Submit your `.Rmd` file (and the knitted HTML or PDF) via [LMS / email]. Name it `week03_[your_last_name].Rmd`.
+Submit your `.Rmd` file via [LMS / email]. Name it `week03_[your_last_name].Rmd`.

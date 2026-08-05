@@ -45,8 +45,6 @@ A researcher analyzes 200 hospital patients and finds 60% have hypertension. Wri
 
 ---
 
-## Optional video
+## Slides
 
-A short video (~5–6 min) walks through the slides for this lesson and covers what descriptive statistics can and cannot tell you, and how to choose between summary statistics based on variable type.
-
-📄 [View the video script](video_scripts/01_descriptive_stats_script.md) · 🖼️ [Download the slides](../slides/01_descriptive_stats.pdf)
+🖼️ [Download the slides](../slides/01_descriptive_stats.pdf)

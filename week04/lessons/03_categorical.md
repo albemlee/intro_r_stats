@@ -57,27 +57,6 @@ penguins %>%
 
 ---
 
-## Practice
+## Slides
 
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Create a bar plot of penguin counts by island
-# Your code here
-
-# 2. Reorder the bars so they appear as: Biscoe, Dream, Torgersen
-# Your code here
-
-# 3. Compute the count and proportion of penguins per species
-#    (proportion = count / sum(count))
-# Your code here
-```
-
----
-
-## Optional video
-
-A short video (~5–6 min) walks through the slides for this lesson and covers bar plots, controlling category order with factors, and computing counts with `group_by()` and `summarize()`.
-
-📄 [View the video script](video_scripts/03_categorical_script.md) · 🖼️ [Download the slides](../slides/03_categorical.pdf)
+🖼️ [Download the slides](../slides/03_categorical.pdf)

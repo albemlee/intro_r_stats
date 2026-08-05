@@ -1,8 +1,6 @@
 ---
 title: "Week 7 — Survival Analysis"
 author: "Your Name"
-date: "`r Sys.Date()`"
-output: html_document
 ---
 
 ```{r setup, message=FALSE}
@@ -10,36 +8,13 @@ library(tidyverse)
 library(survival)
 ```
 
-> **Note:** Survival analysis requires time-to-event data with a censoring indicator.  
-> This notebook uses a simulated dataset so no additional download is needed.  
-> In class and in the lesson slides, the HRS dataset is used — replace below if you have access.
+## Data
 
----
+This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
 
-## Simulated survival data
-
-```{r simulate-data}
-set.seed(42)
-n <- 200
-
-surv_df <- tibble(
-  id          = 1:n,
-  # Time to event or censoring (months)
-  months      = round(rexp(n, rate = 0.03) + 1),
-  # Event status: 1 = event occurred, 0 = censored
-  died        = rbinom(n, 1, prob = 0.6),
-  # Group variable
-  treatment   = sample(c("control", "treatment"), n, replace = TRUE),
-  # Continuous covariate
-  age         = round(rnorm(n, mean = 65, sd = 10))
-)
-
-# Cap time at 60 months (end of study)
-surv_df <- surv_df %>%
-  mutate(
-    died   = ifelse(months > 60, 0, died),
-    months = pmin(months, 60)
-  )
+```{r load-data}
+surv_df <- read_csv("hrs/hrs_analyze.csv") %>%
+  drop_na(mos_to_death, died, female, age_2014, bp_dx, depress_dx)
 
 glimpse(surv_df)
 ```
@@ -64,8 +39,8 @@ surv_df %>%
 ## Kaplan-Meier Curve
 
 ```{r km-fit}
-# Fit KM curve by treatment group
-km_fit <- survfit(Surv(months, died) ~ treatment, data = surv_df)
+# Fit KM curve by sex
+km_fit <- survfit(Surv(mos_to_death, died) ~ female, data = surv_df)
 summary(km_fit, times = c(12, 24, 36, 48))
 ```
 
@@ -76,9 +51,9 @@ plot(km_fit,
      lwd        = 2,
      xlab       = "Months",
      ylab       = "Survival probability",
-     main       = "Kaplan-Meier curves by treatment group")
+     main       = "Kaplan-Meier curves by sex")
 legend("topright",
-       legend = c("Control", "Treatment"),
+       legend = c("Male", "Female"),
        col    = c("steelblue", "coral"),
        lwd    = 2)
 ```
@@ -92,7 +67,7 @@ legend("topright",
 ## Log Rank Test
 
 ```{r logrank-test}
-survdiff(Surv(months, died) ~ treatment, data = surv_df)
+survdiff(Surv(mos_to_death, died) ~ female, data = surv_df)
 ```
 
 **State the full hypothesis test result:**
@@ -108,7 +83,7 @@ survdiff(Surv(months, died) ~ treatment, data = surv_df)
 
 ```{r cox-model}
 cox_model <- coxph(
-  Surv(months, died) ~ treatment + age,
+  Surv(mos_to_death, died) ~ female + age_2014 + bp_dx + depress_dx,
   data = surv_df
 )
 summary(cox_model)
@@ -119,7 +94,7 @@ summary(cox_model)
 exp(coef(cox_model))
 ```
 
-**Interpret the hazard ratio for `treatment` in plain language:**
+**Interpret the hazard ratio for `depress_dx` in plain language:**
 
 *Your interpretation here (include: predictor, outcome, HR value, direction, significance):*
 
@@ -128,9 +103,9 @@ exp(coef(cox_model))
 ## 🔨 Exercise: Your own KM curve
 
 ```{r km-exercise}
-# 1. Create a binary age group: "younger" (age < 65) and "older" (age >= 65)
+# 1. Create a binary age group: "younger" (age_2014 < 65) and "older" (age_2014 >= 65)
 surv_df <- surv_df %>%
-  mutate(age_group = ifelse(age < 65, "younger", "older"))
+  mutate(age_group = ifelse(age_2014 < 65, "younger", "older"))
 
 # 2. Fit and plot a KM curve stratified by age_group
 # Your code here

@@ -13,6 +13,8 @@ The test is **non-parametric** — it makes no distributional assumptions.
 
 ## Running the log rank test in R
 
+> **Data source:** This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
+
 ```r
 library(survival)
 
@@ -45,8 +47,6 @@ Reject the null hypothesis. There is a statistically significant difference in s
 
 ---
 
-## Optional video
+## Slides
 
-A short video (~5–6 min) walks through the slides for this lesson and covers the log rank test hypotheses, running `survdiff()` in R, and interpreting the output.
-
-📄 [View the video script](video_scripts/03_logrank_script.md) · 🖼️ [Download the slides](../slides/03_logrank.pdf)
+🖼️ [Download the slides](../slides/03_logrank.pdf)

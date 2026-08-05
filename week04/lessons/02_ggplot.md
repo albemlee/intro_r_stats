@@ -90,26 +90,6 @@ penguins %>%
 
 ---
 
-## Practice
+## Slides
 
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Create a histogram of flipper_length_mm
-# Your code here
-
-# 2. Create a scatter plot of bill_length_mm (x) vs body_mass_g (y), colored by species
-# Your code here
-
-# 3. Add a title to your scatter plot using + labs(title = "...")
-# Your code here
-```
-
----
-
-## Optional video
-
-A short video (~7–8 min) walks through the slides for this lesson and covers the Grammar of Graphics, the three components of every ggplot2 plot, and how to build histograms, scatter plots, and bar charts.
-
-📄 [View the video script](video_scripts/02_ggplot_script.md) · 🖼️ [Download the slides](../slides/02_ggplot.pdf)
+🖼️ [Download the slides](../slides/02_ggplot.pdf)

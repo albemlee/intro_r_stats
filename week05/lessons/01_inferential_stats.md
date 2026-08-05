@@ -50,8 +50,6 @@ b) "The average systolic BP in the population is approximately 128 mmHg."
 
 ---
 
-## Optional video
+## Slides
 
-A short video (~5–6 min) walks through the slides for this lesson and covers the limitation of descriptive statistics, the logic of inferential statistics, and the three core tools: point estimate, standard error, and confidence interval.
-
-📄 [View the video script](video_scripts/01_inferential_stats_script.md) · 🖼️ [Download the slides](../slides/01_inferential_stats.pdf)
+🖼️ [Download the slides](../slides/01_inferential_stats.pdf)

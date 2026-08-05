@@ -77,26 +77,6 @@ You plot a histogram of patient hospital stay duration and it is strongly right-
 
 ---
 
-## Practice
+## Slides
 
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Plot a histogram of body_mass_g. Does it look normal?
-# Your code here
-
-# 2. Based on the shape, compute the appropriate summary statistics
-# Your code here
-
-# 3. Create a faceted histogram of body_mass_g by species
-# Your code here
-```
-
----
-
-## Optional video
-
-A short video (~6–7 min) walks through the slides for this lesson and covers histograms, choosing between mean/SD and the five-number summary, computing group summaries, faceting, and a bonus demo of `ggpairs()` for lazy data exploration.
-
-📄 [View the video script](video_scripts/04_continuous_script.md) · 🖼️ [Download the slides](../slides/04_continuous.pdf) · [Bonus: lazy exploration](../slides/05_lazy_exploration.pdf)
+🖼️ [Download the slides](../slides/04_continuous.pdf) · [Bonus: lazy exploration](../slides/05_lazy_exploration.pdf)

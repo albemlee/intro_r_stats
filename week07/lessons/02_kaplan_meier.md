@@ -19,6 +19,8 @@ Reading a KM curve:
 
 ## Fitting and plotting a KM curve in R
 
+> **Data source:** This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
+
 ```r
 library(tidyverse)
 library(survival)
@@ -52,8 +54,6 @@ In this sample, Group A has better survival — a higher proportion remain event
 
 ---
 
-## Optional video
+## Slides
 
-A short video (~6–7 min) walks through the slides for this lesson and covers how to read a Kaplan-Meier curve, what crossing curves signal, and how to fit and plot a KM curve in R using the `survival` package.
-
-📄 [View the video script](video_scripts/02_kaplan_meier_script.md) · 🖼️ [Download the slides](../slides/02_kaplan_meier.pdf)
+🖼️ [Download the slides](../slides/02_kaplan_meier.pdf)

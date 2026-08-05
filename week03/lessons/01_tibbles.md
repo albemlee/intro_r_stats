@@ -43,23 +43,3 @@ penguins$species               # returns a character vector
 **False.** Both data frames and tibbles can contain columns of different types — numeric, character, logical, and more.
 
 </details>
-
----
-
-## Practice
-
-```r
-library(tidyverse)
-library(palmerpenguins)
-
-# 1. Print the penguins tibble and identify how many rows and columns it has
-penguins
-
-# 2. Extract the bill_length_mm column as a vector using $
-# Your code here
-
-# 3. Extract the first 5 rows of bill_length_mm as a tibble using [ ]
-# Your code here
-```
-
----

@@ -80,8 +80,6 @@ You want to compare hospital stay duration between patients who received treatme
 
 ---
 
-## Optional video
+## Slides
 
-A video (~7–8 min) walks through the slides for this lesson and covers parametric vs. non-parametric tests, checking the normality assumption with histograms, QQ plots, and Shapiro-Wilk, and a test selection guide.
-
-📄 [View the video script](video_scripts/05_assumptions_script.md) · 🖼️ [Download the slides](../slides/06_assumptions.pdf)
+🖼️ [Download the slides](../slides/06_assumptions.pdf)
