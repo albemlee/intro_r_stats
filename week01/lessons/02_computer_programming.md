@@ -51,15 +51,3 @@ Readable code is a form of scientific documentation.
 </details>
 
 ---
-
-## Practice
-
-Open a new R script in RStudio (File → New File → R Script). Write three lines:
-
-1. A comment describing what the script does
-2. A command that stores a number in an object called `my_number`
-3. A command that prints `my_number`
-
-Save the file as `practice.R`.
-
----

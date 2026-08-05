@@ -96,7 +96,7 @@ penguins_small[, "species"]   # species column
 | Matrix | 2D | All same | Grid of numbers (e.g., pixel values) |
 | Data frame | 2D | Mixed | Real datasets with multiple variable types |
 
-> In practice, you will work with data frames almost exclusively once you start doing real data analysis.
+> In practice, you will work with data frames almost exclusively once you start doing data analysis on tabular data.
 
 ---
 
@@ -112,30 +112,3 @@ penguins_small[, "species"]   # species column
 </details>
 
 ---
-
-## Practice
-
-```r
-# 1. Create a vector called flipper_lengths with these values: 181, 186, 195, 193, 190
-# Your code here
-
-# 2. Add 2mm to every flipper length in one line
-# Your code here
-
-# 3. Create a data frame called penguin_df with columns:
-#    - species: c("Adelie", "Adelie", "Chinstrap")
-#    - bill_length: c(39.1, 38.7, 46.5)
-#    - flipper_length: c(181, 186, 195)
-# Your code here
-
-# 4. Print the species column using $
-# Your code here
-```
-
----
-
-## Optional video
-
-A longer video (~10–12 min) walks through the slides for this lesson and covers vectors, matrices, and data frames — including indexing and when to use each structure.
-
-📄 [View the video script](video_scripts/05_data_structures_script.md) · 🖼️ [Download the slides](../slides/05_vectors.pdf) · [06_matrices.pdf](../slides/06_matrices.pdf) · [07_dataframes.pdf](../slides/07_dataframes.pdf)

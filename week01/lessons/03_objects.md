@@ -66,24 +66,24 @@ Use comments generously. Explain *why* you are doing something, not just *what* 
 
 ## Knowledge check
 
-Trace through this code. What are the final values of `x` and `y`?
+Trace through this code. What are the final values of `bp` and `threshold`?
 
 ```r
-x <- 3 + 5
-x <- x - 4
-y <- x + 1
-print(x)
-print(y)
+bp <- 120
+bp <- bp + 15
+threshold <- bp - 5
+print(bp)
+print(threshold)
 ```
 
 <details>
 <summary>Answer</summary>
 
-- After line 1: `x = 8`
-- After line 2: `x = 4` (x is reassigned)
-- After line 3: `y = 5`
-- `print(x)` → `4`
-- `print(y)` → `5`
+- After line 1: `bp = 120`
+- After line 2: `bp = 135` (bp is reassigned)
+- After line 3: `threshold = 130`
+- `print(bp)` → `135`
+- `print(threshold)` → `130`
 
 </details>
 

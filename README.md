@@ -152,6 +152,12 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 
 ---
 
+## Becoming a TA
+
+Interested in TAing a future run of this course? Try the [TA self-assessment](self_assessment.md) — 10 questions spanning the full course, from R basics to survival analysis, to help you gauge your readiness.
+
+---
+
 ## Final project
 
 In groups of 3–4, you will analyze a publicly available dataset and present your findings in a 2-minute video. See the [final project description](week08/final_project.md) for full details.

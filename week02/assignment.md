@@ -44,7 +44,6 @@ Above each major code chunk, add a brief prose paragraph (or use chunk labels/co
 ---
 title: "Week 2 Assignment"
 author: "Your Name"
-output: html_document
 ---
 
 ## Data
