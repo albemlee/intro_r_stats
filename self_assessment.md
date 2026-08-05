@@ -2,13 +2,13 @@
 
 This self-assessment is for PROPEL scholars considering a teaching assistant (TA) role for *Introduction to R and Statistics*. It is not graded and does not need to be submitted — it's a tool to help you gauge your own readiness.
 
-Work through all 10 questions **without notes or AI tools**, then check your answers. If you can answer at least 8 of these confidently and correctly, and can explain *why* the answer is correct (not just what it is), you likely have the foundation to help other scholars as a TA. If a topic below is shaky, revisit that week's lessons before applying.
+Work through all 10 questions, then check your answers. If you can answer at least 8 of these confidently and correctly, and can explain *why* the answer is correct (not just what it is), you likely have the foundation to help other scholars as a TA. If a topic below is shaky, revisit that week's lessons before applying.
 
 The questions move from Week 1 fundamentals to Week 7 survival analysis, roughly in order of difficulty.
 
 ---
 
-### 1. Objects and assignment (Week 1)
+### 1. Objects and assignment
 
 What are the final values of `a` and `b` after running this code?
 
@@ -27,7 +27,7 @@ b <- a - 5
 
 ---
 
-### 2. Data structures (Week 2)
+### 2. Data structures
 
 What is the key difference between a **matrix** and a **data frame** in R?
 
@@ -40,7 +40,7 @@ Both are 2-dimensional, but a matrix requires all values to be the same type, wh
 
 ---
 
-### 3. The pipe and tidyverse verbs (Week 3)
+### 3. The pipe and tidyverse verbs
 
 What does the following code do?
 
@@ -59,35 +59,35 @@ It takes the `penguins` tibble, keeps only rows where `species` is `"Gentoo"` (`
 
 ---
 
-### 4. Joins (Week 3)
+### 4. Joins
 
-A scholar uses `bind_rows()` to combine two tibbles that have different column names and gets a result full of `NA` values. What went wrong, and what should they use instead?
+You use `bind_rows()` to combine two tibbles that have different column names and get a result full of `NA` values. What went wrong, and what should you use instead?
 
 <details>
 <summary>Answer</summary>
 
-`bind_rows()` stacks tibbles vertically and requires the **same columns** in both — mismatched columns produce `NA`s. If the tables have different columns linked by a shared key (e.g., an ID column), the scholar should use a **join** (`left_join()`, `inner_join()`, or `full_join()`) instead.
+`bind_rows()` stacks tibbles vertically and requires the **same columns** in both — mismatched columns produce `NA`s. If the tables have different columns linked by a shared key (e.g., an ID column), you should use a **join** (`left_join()`, `inner_join()`, or `full_join()`) instead.
 
 </details>
 
 ---
 
-### 5. Grammar of Graphics (Week 4)
+### 5. Grammar of Graphics
 
-Name the three components every `ggplot2` plot needs, and explain what changes if you swap `geom_histogram()` for `geom_point()`.
+You write `geom_point(aes(color = "blue"))` expecting blue points, but instead get a single-category legend and pinkish-red points. What went wrong, and how should you fix it?
 
 <details>
 <summary>Answer</summary>
 
-Every plot needs **data** (a tibble), **aesthetics** (`aes()`, mapping variables to visual properties like x, y, color), and a **geometry** (`geom_*()`, the type of plot). Swapping `geom_histogram()` (one variable, shows distribution) for `geom_point()` (two variables, shows relationship) changes the plot type but keeps the same data/aesthetics structure — you'd also need to add a `y` mapping since `geom_point()` requires both x and y.
+Anything inside `aes()` is treated as a **mapping to data**, not a fixed value — so `color = "blue"` inside `aes()` creates a categorical variable with one level (the text `"blue"`), and ggplot2 assigns it a color from its default palette rather than literally coloring the points blue. Fixed, non-data-driven properties belong **outside** `aes()`: `geom_point(color = "blue")`. This aes()-vs-outside distinction — map to data inside, set fixed values outside — is one of the most common early ggplot2 mistakes scholars make.
 
 </details>
 
 ---
 
-### 6. Confidence intervals (Week 5)
+### 6. Confidence intervals
 
-A 95% confidence interval for mean blood pressure is [128, 136]. A scholar interprets this as "there is a 95% probability the true mean falls between 128 and 136." Is this interpretation correct? Why or why not?
+A 95% confidence interval for mean blood pressure is [128, 136]. You interpret this as "there is a 95% probability the true mean falls between 128 and 136." Is this interpretation correct? Why or why not?
 
 <details>
 <summary>Answer</summary>
@@ -98,9 +98,9 @@ A 95% confidence interval for mean blood pressure is [128, 136]. A scholar inter
 
 ---
 
-### 7. Test selection under assumption violations (Week 5)
+### 7. Test selection under assumption violations
 
-A scholar wants to compare hospital length of stay between two treatment groups. A histogram of the data shows strong right skew, and a Shapiro-Wilk test returns p < 0.001. Which test should they use, and why not a t-test?
+You want to compare hospital length of stay between two treatment groups. A histogram of the data shows strong right skew, and a Shapiro-Wilk test returns p < 0.001. Which test should you use, and why not a t-test?
 
 <details>
 <summary>Answer</summary>
@@ -111,9 +111,9 @@ They should use the **Wilcoxon rank-sum test** (non-parametric). A t-test assume
 
 ---
 
-### 8. Interpreting logistic regression output (Week 6)
+### 8. Interpreting logistic regression output
 
-A logistic regression predicting depression diagnosis reports `exp(coef) = 1.75` for hypertension diagnosis (p < 0.001). Write a plain-language interpretation, and explain one common mistake scholars make with this number.
+A logistic regression predicting depression diagnosis reports `exp(coef) = 1.75` for hypertension diagnosis (p < 0.001). Write a plain-language interpretation, and explain one common mistake you might make with this number.
 
 <details>
 <summary>Answer</summary>
@@ -124,7 +124,7 @@ A logistic regression predicting depression diagnosis reports `exp(coef) = 1.75`
 
 ---
 
-### 9. Model diagnostics and multicollinearity (Week 6)
+### 9. Model diagnostics and multicollinearity
 
 Why is it a problem if two predictors in a linear regression model are highly correlated with each other (multicollinearity), even if the overall model fits the data well?
 
@@ -137,14 +137,14 @@ Multicollinearity doesn't necessarily hurt the model's overall predictive fit, b
 
 ---
 
-### 10. Cox regression vs. the log-rank test (Week 7)
+### 10. Cox regression vs. the log-rank test
 
-A scholar has already run a log-rank test comparing survival between two treatment groups and found a significant difference. Their PI now asks them to also adjust for age and sex. Why can't they just add these to the log-rank test, and what should they use instead?
+You have already run a log-rank test comparing survival between two treatment groups and found a significant difference. Your PI now asks you to also adjust for age and sex. Why can't you just add these to the log-rank test, and what should you use instead?
 
 <details>
 <summary>Answer</summary>
 
-The log-rank test only compares survival curves between groups defined by a single categorical variable — it cannot incorporate additional covariates. To adjust for age and sex while estimating the effect of treatment, the scholar needs **Cox proportional hazards regression** (`coxph()`), which can include multiple predictors simultaneously and produces a **hazard ratio** for each one, adjusted for the others. For example, an HR of 0.72 for treatment (adjusting for age and sex) would mean treated patients had 0.72 times the hazard of the outcome compared to untreated patients, holding age and sex constant — a 28% reduction in hazard.
+The log-rank test only compares survival curves between groups defined by a single categorical variable — it cannot incorporate additional covariates. To adjust for age and sex while estimating the effect of treatment, you need **Cox proportional hazards regression** (`coxph()`), which can include multiple predictors simultaneously and produces a **hazard ratio** for each one, adjusted for the others. For example, an HR of 0.72 for treatment (adjusting for age and sex) would mean treated patients had 0.72 times the hazard of the outcome compared to untreated patients, holding age and sex constant — a 28% reduction in hazard.
 
 </details>
 
