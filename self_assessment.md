@@ -1,10 +1,10 @@
-# TA Self-Assessment
+# Self-Assessment
 
-This self-assessment is for PROPEL scholars considering a teaching assistant (TA) role for *Introduction to R and Statistics*. It is not graded and does not need to be submitted — it's a tool to help you gauge your own readiness.
+This self-assessment is for PROPEL scholars who want to check their understanding of *Introduction to R and Statistics* — including scholars considering helping other scholars work through the material. It is not graded and does not need to be submitted — it's a tool to help you gauge your own progress.
 
-Work through all 10 questions, then check your answers. If you can answer at least 8 of these confidently and correctly, and can explain *why* the answer is correct (not just what it is), you likely have the foundation to help other scholars as a TA. If a topic below is shaky, revisit that week's lessons before applying.
+Work through all 10 questions, then check your answers. If you can answer most of these confidently and correctly, and can explain *why* the answer is correct (not just what it is), you have a solid handle on the material and are well-positioned to help others with it. If a topic below is shaky, it's worth revisiting the relevant lessons.
 
-The questions move from Week 1 fundamentals to Week 7 survival analysis, roughly in order of difficulty.
+The questions span the full course, roughly in order of difficulty.
 
 ---
 
@@ -92,7 +92,7 @@ A 95% confidence interval for mean blood pressure is [128, 136]. You interpret t
 <details>
 <summary>Answer</summary>
 
-**No.** The true population mean is a fixed (though unknown) value — it either is or isn't in the interval; there's no probability attached to it. The correct interpretation is that if we repeated the sampling process many times and built a confidence interval each time, about 95% of those intervals would contain the true population mean. This is one of the most common misconceptions scholars will bring to office hours, so being able to correct it clearly is an important TA skill.
+**No.** The true population mean is a fixed (though unknown) value — it either is or isn't in the interval; there's no probability attached to it. The correct interpretation is that if we repeated the sampling process many times and built a confidence interval each time, about 95% of those intervals would contain the true population mean. This is one of the most common misconceptions scholars run into, so being able to explain the correction clearly is worth practicing.
 
 </details>
 
@@ -118,7 +118,7 @@ A logistic regression predicting depression diagnosis reports `exp(coef) = 1.75`
 <details>
 <summary>Answer</summary>
 
-"Patients with a hypertension diagnosis have 1.75 times the odds of a depression diagnosis compared to those without hypertension, and this association is statistically significant." The common mistake is treating an odds ratio like a probability ratio — an OR of 1.75 does **not** mean "75% more likely" in terms of raw probability. Odds and probability are related but distinct, and conflating them is a frequent error worth catching as a TA.
+"Patients with a hypertension diagnosis have 1.75 times the odds of a depression diagnosis compared to those without hypertension, and this association is statistically significant." The common mistake is treating an odds ratio like a probability ratio — an OR of 1.75 does **not** mean "75% more likely" in terms of raw probability. Odds and probability are related but distinct, and conflating them is a frequent error worth watching for.
 
 </details>
 
@@ -152,8 +152,8 @@ The log-rank test only compares survival curves between groups defined by a sing
 
 ## Scoring yourself
 
-- **9–10 correct, with confident explanations:** You're well-positioned to TA this course.
-- **6–8 correct:** Solid foundation — review the specific weeks behind any questions you missed before applying.
-- **5 or fewer:** Consider retaking the relevant weeks' lessons and assignments before applying; TAs need to explain these concepts clearly to scholars who are seeing them for the first time.
+- **9–10 correct, with confident explanations:** You have a strong grasp of the course material — and the kind of understanding that would let you help other scholars work through it.
+- **6–8 correct:** Solid foundation — it may help to review the lessons behind any questions you missed.
+- **5 or fewer:** Consider revisiting the lessons and assignments — these concepts often take a second pass to click.
 
-Being a good TA isn't about getting every question right on the first try — it's about being able to explain *why* an answer is correct in a way that helps another scholar understand it too. If you found yourself able to identify the right answer but struggled to explain the reasoning, that's worth practicing before the term starts.
+There's no pass/fail line here — getting every question right on the first try isn't the point. What matters more is being able to explain *why* an answer is correct, not just recognize it. That's also what makes a good helper: if you found yourself able to identify the right answer but struggled to explain the reasoning, that's worth practicing.
