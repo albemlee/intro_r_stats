@@ -2,7 +2,9 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-**Lead Instructor:** Albert Lee · albert.lee8@ucsf.edu  
+**Lead Instructors:** 
+    Albert Lee · albert.lee8@ucsf.edu
+    Karla Lindquist · karla.lindquist@ucsf.edu
 **Program:** UCSF PROPEL  
 **Duration:** 8 weeks
 
@@ -152,9 +154,9 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 
 ---
 
-## Becoming a TA
+## Becoming a helper
 
-Interested in TAing a future run of this course? Try the [TA self-assessment](self_assessment.md) — 10 questions spanning the full course, from R basics to survival analysis, to help you gauge your readiness.
+Have prior programming or statistics experience and interested in helping out your classmates? Try the [Helper self-assessment](self_assessment.md) — 10 questions spanning the full course, from R basics to survival analysis, to help you gauge your readiness.
 
 ---
 
