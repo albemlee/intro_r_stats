@@ -3,7 +3,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 **Lead Instructors:** 
-    Albert Lee · albert.lee8@ucsf.edu
+    Albert Lee · albert.lee8@ucsf.edu 
     Karla Lindquist · karla.lindquist@ucsf.edu
 **Program:** UCSF PROPEL  
 **Duration:** 8 weeks
@@ -21,7 +21,7 @@ Every week follows the same pattern:
 | Step | What | Where |
 |------|------|--------|
 | 1 | Read the lesson(s) for the week | `weekXX/lessons/` |
-| 2 | Follow along if there is a notebook | `weekXX/notebook/
+| 2 | Follow along if there is a notebook | `weekXX/notebook/` |
 | 3 | Attend the 90-minute session | In person |
 | 4 | Complete the assignment | `weekXX/assignment.md` |
 
@@ -154,9 +154,9 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 
 ---
 
-## Becoming a helper
+## Becoming a TA or peer mentor
 
-Have prior programming or statistics experience and interested in helping out your classmates? Try the [Helper self-assessment](self_assessment.md) — 10 questions spanning the full course, from R basics to survival analysis, to help you gauge your readiness.
+Interested in being a TA or peer helper for this course? Try the [Introduction to R and Statistics Self-Assessment](https://forms.gle/tGVyeyeapgXFyozV7) — 10 questions spanning concepts covered in this course, to help you gauge your readiness.
 
 ---
 
@@ -180,6 +180,7 @@ The original workshops covered:
 - **R for Everyone** — an introductory workshop covering R fundamentals and the RStudio environment
 - **R for Data Manipulation** — a workshop on the tidyverse, data wrangling, and the pipe operator
 - **R for Statistics** — a workshop covering descriptive and inferential statistics, regression, and survival analysis
+- **R for Visualizations** - a workshop covering the basics of visualizations with R
 
 These materials were used as source content. Claude helped restructure them into a flipped/reverse-classroom format suitable for a credit-bearing 8-week course — producing student-facing lesson notes in Markdown, Rmd notebooks, comprehension checks, weekly assignments, and instructor guidance for each week.
 
