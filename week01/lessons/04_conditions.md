@@ -1,5 +1,7 @@
 # Conditions
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Conditions/1_0y62erth)
+
 ## What are conditions?
 
 A **condition** is something that must be `TRUE` for a block of code to run. Conditions let your programs make decisions.
