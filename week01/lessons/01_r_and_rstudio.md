@@ -1,5 +1,7 @@
 # R and RStudio
 
+[Watch Video Lesson](https://media.ucsf.edu/media/R+and+RStudio/1_0w5dd5kr)
+
 ## What are R and RStudio?
 
 **R** is a programming language designed for statistical computing and data analysis. It is free, open-source, and widely used across biomedical research, epidemiology, and data science. When you write R code, you are giving a computer a precise set of instructions.
