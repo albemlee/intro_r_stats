@@ -1,5 +1,7 @@
 # Computer Programming
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Computer+Programming/1_yjhzlwqc)
+
 ## What is computer programming?
 
 Computer programming — often called **coding** — is the act of writing instructions that a computer can execute. A program is a sequence of these instructions.
