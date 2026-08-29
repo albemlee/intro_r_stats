@@ -1,6 +1,6 @@
 # Computer Programming
 
-[Watch Video Lesson](https://media.ucsf.edu/media/Computer+Programming/1_yjhzlwqc)
+[Watch Video Lesson](https://media.ucsf.edu/media/Computer+Programming/1_dneiz26b)
 
 ## What is computer programming?
 
