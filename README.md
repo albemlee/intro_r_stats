@@ -49,6 +49,7 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 | [Objects](week01/lessons/03_objects.md) |
 | [Conditions](week01/lessons/04_conditions.md) |
 | [Loops](week01/lessons/05_loops.md) |
+
 [Video Lessons](https://media.ucsf.edu/playlist/dedicated/1_j6xf1tbo/)
 
 **Supplement:** [UCSF ChatGPT Enterprise](week01/supplement/chatgpt_enterprise.md)  
