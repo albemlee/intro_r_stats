@@ -1,5 +1,7 @@
 # Objects
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Objects/1_5wferk6g)
+
 ## What are objects?
 
 In R, an **object** (also called a **variable**) stores a value so you can use it later. You create an object using the **assignment operator** `<-`.
