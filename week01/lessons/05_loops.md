@@ -1,5 +1,7 @@
 # Loops
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Loops/1_jie0yrsu)
+
 ## Why loops exist
 
 Imagine you need to check whether each of 50 patients passes a screening threshold. You could write 50 separate `if` statements — but that is error-prone and tedious. A **loop** lets you repeat the same block of code automatically.
