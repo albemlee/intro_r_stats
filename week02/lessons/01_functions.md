@@ -1,5 +1,7 @@
 # Functions
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Functions/1_j6kn4fhl)
+
 ## What are functions?
 
 A **function** is a named block of code that performs a specific task on a set of inputs and returns a result. You have already used built-in functions like `print()`, `mean()`, and `sqrt()`.
@@ -76,6 +78,8 @@ This is the key benefit: write the logic once, use it many times.
 ---
 
 ## Packages: functions written by other people
+
+[Watch Video Lesson](https://media.ucsf.edu/media/Packages/1_3dzf9x06)
 
 `print()`, `mean()`, and `sqrt()` come built into R, but most functions you will use in this course do not. They live in **packages** — collections of functions (and sometimes data) that someone else wrote and shared, so you don't have to write everything from scratch.
 
