@@ -65,6 +65,8 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 | [Functions](week02/lessons/01_functions.md) |
 | [Vectors, Matrices, and Data Frames](week02/lessons/02_data_structures.md) |
 
+[Video Lessons](https://media.ucsf.edu/playlist/dedicated/1_llmkxf0q/)
+
 **Notebook:** [Week 2 Notebook](week02/notebook/week02_r_fundamentals.Rmd)  
 **Assignment:** [Week 2 Assignment](week02/assignment.md)
 
