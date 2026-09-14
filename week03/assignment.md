@@ -13,7 +13,6 @@ Find a publicly available dataset (CSV format) with at least **4 columns** and *
 - [Kaggle Datasets](https://www.kaggle.com/datasets)
 - [CDC Open Data](https://data.cdc.gov/)
 - [data.gov](https://data.gov/)
-- Palmer Penguins (built into R): `library(palmerpenguins); data(penguins)`
 
 > 💡 **Project tip:** If you find a dataset you find interesting, consider using it for your final project.
 
