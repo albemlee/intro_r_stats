@@ -22,11 +22,7 @@ Requirements:
 
 ### 2. Write a function
 
-Write a function that takes your data frame as input and does **at least two** of the following:
-
-- a) Filters rows using a condition
-- b) Adds a new column based on a calculation
-- c) Calculates and prints a summary statistic (e.g., mean, count) for one column
+Write a function that takes your data frame as input and filters to specific rows based on a condition.
 
 ### 3. Call your function
 
@@ -66,7 +62,7 @@ This function identifies high-risk patients (systolic BP > 140) and returns them
 
 ```{r define-function}
 summarize_high_risk <- function(df) {
-  high_risk <- df[df$systolic_bp > 140, ]
+  high_risk <- df[df[, "systolic_bp"] > 140, ]
   cat("High-risk patients:", nrow(high_risk), "\n")
   return(high_risk)
 }
