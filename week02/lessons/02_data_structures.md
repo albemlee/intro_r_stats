@@ -1,6 +1,7 @@
 # Vectors, Matrices, and Data Frames
 
 ## Vectors
+[Watch Video Lesson](https://media.ucsf.edu/media/Vectors/1_dhoh0ih9)
 
 A **vector** stores a sequence of values of the same type. Create one with `c()` (short for "combine"):
 
@@ -45,6 +46,7 @@ grades[2:4]    # [1] 95 90 90  (elements 2 through 4)
 ---
 
 ## Matrices
+[Watch Video Lesson](https://media.ucsf.edu/media/Functions/1_j6kn4fhl)
 
 A **matrix** stores values in a 2-dimensional grid. All values must be the same type.
 
@@ -65,6 +67,7 @@ grades_matrix[2, ]    # row 2, all columns
 ---
 
 ## Data frames
+[Watch Video Lesson](https://media.ucsf.edu/media/Functions/1_j6kn4fhl)
 
 A **data frame** is the most important data structure for real-world analysis. Like a matrix, it is 2-dimensional — but **each column can be a different type**.
 
@@ -91,7 +94,6 @@ penguins_small[, "species"]   # species column
 
 | Structure | Dimensions | Types | Use when... |
 |-----------|-----------|-------|-------------|
-| Object | 1 value | Any | Storing a single result |
 | Vector | 1D | All same | A list of values of one type |
 | Matrix | 2D | All same | Grid of numbers (e.g., pixel values) |
 | Data frame | 2D | Mixed | Real datasets with multiple variable types |
