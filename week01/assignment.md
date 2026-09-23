@@ -47,4 +47,4 @@ bill_lengths <- c(39.1, 45.2, 36.7, 50.3, 42.8, 31.1)
 
 ## Submission
 
-Submit your R script via [LMS / email].
+Submit your R script via Canvas: https://canvas.ucsf.edu/courses/3084/assignments.
