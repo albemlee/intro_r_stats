@@ -1,5 +1,7 @@
 # Subsetting Tibbles: select() and filter()
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Subsetting/1_fg4lrate)
+
 ## select() — choose columns
 
 `select()` keeps the columns you name and drops the rest:

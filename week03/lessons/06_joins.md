@@ -1,5 +1,7 @@
 # Combining Data: bind_rows() and Joins
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Joins/1_111628k8)
+
 ## bind_rows() — stacking tibbles vertically
 
 If you have two tibbles with the **same columns**, you can stack them:

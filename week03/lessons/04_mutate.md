@@ -1,5 +1,7 @@
 # Adding Variables with mutate()
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Mutate/1_dv0oq59e)
+
 ## What does mutate() do?
 
 `mutate()` adds new columns to a tibble (or modifies existing ones) based on expressions you define.

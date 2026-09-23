@@ -1,5 +1,7 @@
 # The Tidyverse and the Pipe Operator
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Tidyverse/1_1at03n16)
+
 ## What is the tidyverse?
 
 The **tidyverse** is a collection of R packages that share a common philosophy: code should read like a description of what you are doing with your data.

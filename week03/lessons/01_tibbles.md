@@ -1,8 +1,10 @@
 # Data Frames and Tibbles
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Tibbles/1_t2fn90d3)
+
 ## From data frames to tibbles
 
-You already know what a data frame is. A **tibble** is the tidyverse's improved version of a data frame. Tibbles behave almost identically, but with two key differences.
+You already know what a data frame is. A **tibble** is the *tidyverse's* improved version of a data frame. Tibbles behave almost identically, but with two key differences.
 
 ### Nicer printing
 

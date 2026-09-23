@@ -84,6 +84,8 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 | [Aggregating with group_by() and summarize()](week03/lessons/05_summarize.md) |
 | [Combining Data: bind_rows() and Joins](week03/lessons/06_joins.md) |
 
+[Video Lessons](https://media.ucsf.edu/playlist/dedicated/1_75a0nqcp/)
+
 **Notebook:** [Week 3 Notebook](week03/notebook/week03_tidyverse.Rmd)  
 **Assignment:** [Week 3 Assignment](week03/assignment.md)
 

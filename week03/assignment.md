@@ -30,7 +30,11 @@ Create at least one new column using `mutate()`. The new column should be derive
 
 Produce a grouped summary table. Your summary should include at least one count and one mean (or other aggregate statistic).
 
-### Task 4: Prose explanations
+### Task 4: Joins
+
+Find a separate but related dataset that can augment your original analysis. Join the new data to the original data and write the results to a new CSV file.
+
+### Task 5: Prose explanations
 
 Before each code chunk, write a brief prose paragraph explaining what the code does in plain English.
 
@@ -39,8 +43,9 @@ Before each code chunk, write a brief prose paragraph explaining what the code d
 ## Written note
 
 Include a short prose section (2–3 sentences) in your notebook describing:
-- What dataset you chose and where it came from
+- What dataset(s) you chose and where it came from
 - What you found interesting about the summary table from Task 3
+- Any additional work you have to do to enable the datasets to be joined in Task 4
 
 ---
 

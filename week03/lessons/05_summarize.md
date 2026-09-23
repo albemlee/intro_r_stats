@@ -1,5 +1,7 @@
 # Aggregating with group_by() and summarize()
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Summarize/1_agf72y5l)
+
 ## The problem
 
 Each row in the penguins dataset represents one penguin. But what if you want to understand each *species* as a whole — like the average bill length per species?
