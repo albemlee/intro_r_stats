@@ -1,5 +1,7 @@
 # Descriptive Statistics
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Descriptive+Statistics/1_zoyoao2c/-1)
+
 ## What descriptive statistics does — and doesn't do
 
 **Descriptive statistics** summarizes and describes your sample. That is all it does. It does not allow you to draw conclusions about the broader population.

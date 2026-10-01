@@ -1,5 +1,7 @@
 # Describing Continuous Variables
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Continuous/1_uh1kob14/-1)
+
 ## Start with a histogram
 
 Always plot a continuous variable before calculating summary statistics. The shape of the distribution determines which statistics are appropriate.

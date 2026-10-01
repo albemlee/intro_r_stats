@@ -101,6 +101,8 @@ You have access to **UCSF ChatGPT Enterprise** — a HIPAA-compliant AI platform
 | [Describing Categorical Variables](week04/lessons/03_categorical.md) |
 | [Describing Continuous Variables](week04/lessons/04_continuous.md) |
 
+[Video Lessons](https://media.ucsf.edu/playlist/dedicated/1_rzh6rw4n/)
+
 **Notebook:** [Week 4 Notebook](week04/notebook/week04_descriptive_stats.Rmd)  
 **Assignment:** [Week 4 Assignment](week04/assignment.md)
 

@@ -1,5 +1,7 @@
 # Describing Categorical Variables
 
+[Watch Video Lesson](https://media.ucsf.edu/media/Categorical/1_2hm2p12j/-1)
+
 ## Bar plots
 
 The standard visualization for a categorical variable is a **bar plot** showing counts per category:

@@ -1,5 +1,7 @@
 # Grammar of Graphics and ggplot2
 
+[Watch Video Lesson](https://media.ucsf.edu/media/ggplot/1_66383ob1/-1)
+
 ## What is ggplot2?
 
 `ggplot2` is R's premier visualization package, included in the tidyverse. It implements the **Grammar of Graphics** — a system for describing plots in terms of their components.
