@@ -52,4 +52,5 @@ Include a final prose section (150–200 words) summarizing:
 
 ## Submission
 
-Submit your `.Rmd` file via [LMS / email]. Name it `week06_[your_last_name].Rmd`.
+Submit your .Rmd file via Canvas: https://canvas.ucsf.edu/courses/3084/assignments
+
