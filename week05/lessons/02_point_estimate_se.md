@@ -47,7 +47,7 @@ complete_bill_lengths <- penguins %>%
 
 boot_means <- replicate(300, {
   resample <- complete_bill_lengths %>%
-    sample_n(size = nrow(penguins), replace = TRUE)
+    sample_n(size = nrow(complete_bill_lengths), replace = TRUE)
   mean(resample$bill_length_mm)
 })
 
