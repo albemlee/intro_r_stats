@@ -2,11 +2,13 @@
 
 ## Point estimate
 
-A **point estimate** is your sample statistic used as a best guess for the corresponding population parameter.
+A **point estimate** is a single value calculated from your sample that is used to estimate a corresponding population parameter.
 
 If your sample is representative of the population:
 - Sample mean → point estimate of population mean
 - Sample proportion → point estimate of population proportion
+
+*Caveat:* How well a point estimate represents the population depends on how the sample was collected. A convenience sample, for example, may produce a biased estimate.
 
 ```r
 library(tidyverse)
@@ -23,25 +25,30 @@ mean(penguins$bill_length_mm, na.rm = TRUE)
 ## Standard error
 
 **Standard deviation** measures variability of individual observations in your sample.  
-**Standard error** measures variability of the sample statistic itself — if you repeated the study many times, how much would the mean vary?
+**Standard error** measures uncertainty in the sample statistic itself - it tells us how much the statistic would vary across different samples drawn from the same population.
 
-We estimate standard error using **bootstrapping**:
+We can estimate the standard error using **bootstrapping**:
 
-1. Draw 200–300 resamples from your sample (with replacement, same size)
+1. Draw many (e.g., 1,000) resamples from your sample (with replacement, same size)
 2. Compute the statistic (e.g., mean) for each resample
-3. The standard deviation of those statistics = the standard error
+3. The standard deviation of those statistics - this estimates the standard error
 
 ```r
 library(tidyverse)
 library(palmerpenguins)
 
-# Bootstrap standard error of mean bill length
+# Bootstrap standard error of mean bill length (we will use 300 re-samplings here for efficiency)
+# First set a seed for reproducibility (on your machine) and remove penguins with missing bill lengths
+
 set.seed(42)
 
+complete_bill_lengths <- penguins %>%
+  drop_na(bill_length_mm)
+
 boot_means <- replicate(300, {
-  resample <- penguins %>%
+  resample <- complete_bill_lengths %>%
     sample_n(size = nrow(penguins), replace = TRUE)
-  mean(resample$bill_length_mm, na.rm = TRUE)
+  mean(resample$bill_length_mm)
 })
 
 se <- sd(boot_means)
@@ -59,8 +66,6 @@ What is the conceptual difference between standard deviation and standard error?
 
 - **Standard deviation:** measures how spread out individual measurements are in your sample
 - **Standard error:** measures how much your sample statistic (e.g., the mean) would vary if you collected many different samples from the same population
-
-Standard error is the inferential counterpart to standard deviation.
 
 </details>
 
