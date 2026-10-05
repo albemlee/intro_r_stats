@@ -44,4 +44,4 @@ Your written observations for Tasks 1–3 should total **200–300 words**.
 
 ## Submission
 
-Submit your `.Rmd` file via [LMS / email]. Name it `week04_[your_last_name].Rmd`.
+Submit your `.Rmd` file via Canvas: https://canvas.ucsf.edu/courses/3084/assignments

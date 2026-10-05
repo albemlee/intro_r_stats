@@ -2,7 +2,7 @@
 
 ## Comparing two groups
 
-### t-test (parametric — assumes normality)
+### t-test (parametric - compares means)
 
 ```r
 library(tidyverse)
@@ -15,21 +15,10 @@ gentoo <- penguins %>%
 t.test(bill_length_mm ~ sex, data = gentoo)
 ```
 
-### Wilcoxon rank-sum test (non-parametric)
+### Wilcoxon rank-sum test (non-parametric - compares distributions between groups)
 
 ```r
 wilcox.test(bill_length_mm ~ sex, data = gentoo)
-```
-
----
-
-## Comparing a categorical outcome: chi-squared test
-
-Use `chisq.test()` to test whether two categorical variables are independent:
-
-```r
-# Is species independent of sex?
-chisq.test(table(penguins$species, penguins$sex))
 ```
 
 ---
@@ -49,18 +38,18 @@ pairwise.t.test(penguins$body_mass_g, penguins$species,
                 p.adjust.method = "bonferroni")
 ```
 
-The **Bonferroni correction** adjusts the significance threshold to account for multiple comparisons, reducing the chance of a false positive.
+The **Bonferroni correction** adjusts for multiple comparisons, reducing the chance of false-positive findings.
 
 ---
 
 ## Knowledge check
 
-**True or False:** You can use non-parametric tests to compare the flipper length of male and female Gentoo penguins, even if the data is normally distributed.
+**Which test would you use?** If you want to compare mean bill length between male and female Gentoo penguins.
 
 <details>
 <summary>Answer</summary>
 
-**True.** Non-parametric tests can always be used — they make fewer assumptions. However, parametric tests are generally more powerful (better at detecting real differences) when their assumptions are met, so they are preferred when normality holds.
+**Two-sample t-test.** The outcome (bill length) is continuous, there are two groups (male and female), and the goal is to compare their means.
 
 </details>
 

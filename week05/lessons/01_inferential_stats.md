@@ -2,7 +2,7 @@
 
 ## The limitation of descriptive statistics
 
-Descriptive statistics describes your sample. But in research, we care about the *population* — the broader group our sample came from.
+Descriptive statistics describe your sample. But in research, we care about the *population* — the broader group our sample came from.
 
 The challenge: we can never measure the entire population. We can only work with our sample and use it to make *inferences* about the population.
 
@@ -28,9 +28,9 @@ This is exactly the question inferential statistics answers.
 |------|------------------|
 | **Point estimate** | Your best single guess at the population value |
 | **Standard error** | How much your estimate might vary across samples |
-| **Confidence interval** | A range that likely contains the true population value |
+| **Confidence interval** | A range of plausible values for the true population value (e.g. a 95% confidence interval would capture the true population value in 95% of repeated samples) |
 
-Together, these replace a single number (your sample statistic) with an honest statement about what the population probably looks like.
+Together, these replace a single number (your sample statistic) with an honest statement about what the data suggests about the population.
 
 ---
 

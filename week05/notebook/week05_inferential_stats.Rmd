@@ -23,16 +23,14 @@ cat("Point estimate (mean bill length):", round(point_est, 2), "mm\n")
 ```{r bootstrap-se}
 set.seed(42)
 
-# Draw 300 resamples and compute the mean for each
+complete_bill_lengths <- penguins %>%
+  drop_na(bill_length_mm)
+
 boot_means <- replicate(300, {
-  resample <- penguins %>%
-    drop_na(bill_length_mm) %>%
-    sample_n(size = nrow(drop_na(penguins, bill_length_mm)), replace = TRUE)
+  resample <- complete_bill_lengths %>% sample_n(nrow(complete_bill_lengths), replace = TRUE)
   mean(resample$bill_length_mm)
 })
-
 se <- sd(boot_means)
-cat("Standard error:", round(se, 4), "\n")
 
 # The bootstrap distribution should be approximately normal
 hist(boot_means, main = "Bootstrap distribution of mean bill length",
@@ -69,11 +67,15 @@ ggplot(gentoo, aes(x = flipper_length_mm)) +
   geom_histogram(bins = 20) +
   labs(title = "Gentoo flipper length distribution")
 
-# Shapiro-Wilk test
-shapiro.test(gentoo$flipper_length_mm)
+# QQ plot
+penguins %>%
+  filter(species == "Gentoo") %>%
+  pull(flipper_length_mm) %>%
+  qqnorm()
+qqline(penguins %>% filter(species == "Gentoo") %>% pull(flipper_length_mm))
 ```
 
-**Question:** Based on the histogram and Shapiro-Wilk result, is the normality assumption met for Gentoo flipper lengths?
+**Question:** Based on the histogram and QQ plot, does the distribution show strong skewness or outliers that would make a t-test questionable?
 
 *Your answer here:*
 
@@ -98,7 +100,7 @@ t.test(flipper_length_mm ~ sex, data = gentoo_sex)
 *Test used and why:*  
 *p-value:*  
 *Conclusion:*  
-*Possible error type:*
+*What type of error could you be making based on your conclusion?*
 
 ### 🔨 Exercise: Comparing Groups
 
@@ -112,15 +114,6 @@ t.test(flipper_length_mm ~ sex, data = gentoo_sex)
 
 # 3. State H₀, Hₐ, your p-value, and your conclusion in plain language
 # (Write as a comment)
-```
-
----
-
-## Chi-Squared Test
-
-```{r chisq-test}
-# Is species independent of sex?
-chisq.test(table(penguins$species, penguins$sex))
 ```
 
 ---

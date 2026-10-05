@@ -45,4 +45,5 @@ In a prose section at the end of your notebook, write 150–200 words reporting:
 
 ## Submission
 
-Submit your `.Rmd` file via [LMS / email]. Name it `week05_[your_last_name].Rmd`.
+Submit your .Rmd file via Canvas: https://canvas.ucsf.edu/courses/3084/assignments
+
