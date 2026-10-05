@@ -30,11 +30,14 @@ library(palmerpenguins)
 point_est <- mean(penguins$bill_length_mm, na.rm = TRUE)
 
 # Bootstrap SE
+
 set.seed(42)
+
 complete_bill_lengths <- penguins %>%
   drop_na(bill_length_mm)
+
 boot_means <- replicate(300, {
-  resample <- penguins %>% sample_n(nrow(penguins), replace = TRUE)
+  resample <- complete_bill_lengths %>% sample_n(nrow(complete_bill_lengths), replace = TRUE)
   mean(resample$bill_length_mm)
 })
 se <- sd(boot_means)
