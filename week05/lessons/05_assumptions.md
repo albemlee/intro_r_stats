@@ -8,14 +8,14 @@ The most important distinction: **parametric vs. non-parametric tests**.
 
 | Type | Assumption | Examples |
 |------|-----------|---------|
-| **Parametric** | Data follows a specific distribution (usually normal) | t-test, ANOVA |
-| **Non-parametric** | No distributional assumption | Wilcoxon rank-sum, chi-squared |
+| **Parametric** | Makes assumptions about the distribution of the outcome (or model errors) | t-test, ANOVA |
+| **Non-parametric** | Makes fewer assumptions about the outcome distribution | Wilcoxon rank-sum, Kruskal-Wallis|
 
 ---
 
 ## Checking normality
 
-Before choosing a test, check whether your data is normally distributed.
+For tests that assume normality, examine the distribution of the outcome **within each group**. Histograms and QQ plots can help identify strong skewness or outliers.
 
 ### 1. Histogram
 
@@ -41,29 +41,16 @@ penguins %>%
 qqline(penguins %>% filter(species == "Gentoo") %>% pull(flipper_length_mm))
 ```
 
-### 3. Shapiro-Wilk test
-
-```r
-gentoo_flipper <- penguins %>%
-  filter(species == "Gentoo") %>%
-  pull(flipper_length_mm)
-
-shapiro.test(gentoo_flipper)
-```
-
-- p > 0.05 → do not reject normality → parametric test may be appropriate
-- p ≤ 0.05 → evidence against normality → use non-parametric test
-
 ---
 
 ## Test selection guide
 
-| Research question | Data type | Normal? | Test |
-|------------------|-----------|---------|------|
-| Compare means: 2 groups | Continuous | Yes | t-test |
-| Compare medians: 2 groups | Continuous | No | Wilcoxon rank-sum |
-| Compare means: 3+ groups | Continuous | Yes | One-way ANOVA |
-| Association between 2 categorical variables | Categorical | — | Chi-squared |
+| Research question | Test |
+|------------------|------|
+| Compare a continuous outcome: 2 groups | t-test |
+| Compare a continuous outcome: 2 groups with strong skew/outliers | Wilcoxon rank-sum |
+| Compare a continuous outcome: 3+ groups | One-way ANOVA |
+| Compare a continuous outcome: 3+ groups with strong skew/outliers | Kruskal-Wallis |
 
 ---
 
@@ -74,7 +61,7 @@ You want to compare hospital stay duration between patients who received treatme
 <details>
 <summary>Answer</summary>
 
-**Wilcoxon rank-sum test** (non-parametric). The data is not normally distributed, so a t-test is not appropriate.
+**Wilcoxon rank-sum test** (non-parametric) is a reasonable choice because hospital stay duration is strongly right-skewed.
 
 </details>
 
