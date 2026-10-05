@@ -108,9 +108,11 @@ penguins %>%
 
 ```{r summary-stats}
 # Summary statistics
-mean(penguins$body_mass_g, na.rm = TRUE)
-sd(penguins$body_mass_g, na.rm = TRUE)
-summary(penguins$body_mass_g)
+penguins %>%
+  summarize(
+    mean_body_mass = mean(body_mass_g),
+    sd_body_mass = sd(body_mass_g)
+  )
 ```
 
 ```{r facet-histogram}
