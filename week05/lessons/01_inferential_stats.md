@@ -28,7 +28,7 @@ This is exactly the question inferential statistics answers.
 |------|------------------|
 | **Point estimate** | Your best single guess at the population value |
 | **Standard error** | How much your estimate might vary across samples |
-| **Confidence interval** | A range of plausible values for the true population value (e.g. a 95% confidence interval is calculated using a method that would capture the true population value in 95% of repeated samples) |
+| **Confidence interval** | A range of plausible values for the true population value (e.g. a 95% confidence interval would capture the true population value in 95% of repeated samples) |
 
 Together, these replace a single number (your sample statistic) with an honest statement about what the data suggests about the population.
 
