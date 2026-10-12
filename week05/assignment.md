@@ -24,14 +24,13 @@ Example:
 
 ### Task 2: Check normality
 
-Run a histogram and/or Shapiro-Wilk test (if applicable) on the variable of interest. In a prose section after the output, document your decision about which test to use based on the result.
+Run a histogram and/or QQ plot on the variable of interest. In a prose section after the output, document your decision about which test to use based on the result.
 
 ### Task 3: Run the appropriate test
 
 Choose and run the correct test based on your data type and normality check:
 - Continuous + normal: `t.test()` (2 groups) or `aov()` (3+ groups)
 - Continuous + not normal: `wilcox.test()`
-- Two categorical variables: `chisq.test()`
 
 ### Task 4: Written conclusion
 
