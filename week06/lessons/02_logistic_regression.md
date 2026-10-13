@@ -2,7 +2,7 @@
 
 ## When to use logistic regression
 
-Use logistic regression when your dependent variable is **binary** (yes/no, 0/1, disease/no disease).
+Use logistic regression when your outcome/dependent variable is **binary**, in other words has two possible categories (e.g., yes/no, 0/1, disease/no disease).
 
 | Model | Dependent variable |
 |-------|------------------|
@@ -27,7 +27,7 @@ summary(model)
 
 ## Interpreting the output — odds ratios
 
-The raw coefficients from logistic regression are **log-odds** — not directly interpretable. Convert them to **odds ratios** using `exp()`:
+The raw coefficients from logistic regression are expressed in **log-odds**, which are difficult to interpret directly. Convert them to **odds ratios** using `exp()`:
 
 ```r
 exp(coef(model))
@@ -40,8 +40,8 @@ exp(coef(model))
 
 An **odds ratio (OR)**:
 - OR = 1: no association
-- OR > 1: higher odds of the outcome
-- OR < 1: lower odds of the outcome
+- OR > 1: higher odds of the outcome in one group compared to another
+- OR < 1: lower odds of the outcome in one group compared to another
 
 Interpretation of OR = 1.75 for `bp_dx`:
 > "Patients with a hypertension diagnosis have 1.75 times the odds of a depression diagnosis compared to those without hypertension."
@@ -52,12 +52,12 @@ Interpretation of OR = 1.75 for `bp_dx`:
 
 ## Knowledge check
 
-A logistic regression reports exp(coef) = 1.46 for depression diagnosis (p < 0.001) in a survival model. Write a plain-language interpretation.
+A logistic regression model examining the association between depression diagnosis and hospitalization reports an odds ratio of 1.46 for depression diagnosis (p < 0.001). Write a plain-language interpretation.
 
 <details>
 <summary>Answer</summary>
 
-"Patients with a depression diagnosis have 1.46 times the odds of the outcome compared to those without depression. This association is statistically significant."
+"Patients with a depression diagnosis have 1.46 times the odds of hospitalization compared to those without depression. This association is statistically significant (p<0.001)."
 
 </details>
 
