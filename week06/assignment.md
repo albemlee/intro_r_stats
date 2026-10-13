@@ -16,18 +16,18 @@ Using your dataset, fit and interpret a regression model. Choose the model type 
 ### Task 1: Identify your outcome variable
 
 Determine whether your dependent variable is:
-- **Continuous** → use linear regression (`glm()`, default family)
+- **Continuous** → use linear regression (`lm()`)
 - **Binary** → use logistic regression (`glm(..., family = binomial)`)
 
-Show a data check (histogram for continuous; frequency table for binary) confirming your choice. In a prose section, briefly justify your choice of model.
+Show a data check (histogram for continuous; frequency table for binary) to examine your outcome variable. Briefly explain why you chose linear or logistic regression.
 
 ### Task 2: Fit the model
 
 Include at least one independent variable. Show the model code and full output.
 
-### Task 3: Interpret at least two coefficients
+### Task 3: Interpret your regression coefficients
 
-In a prose section after the model output, interpret each coefficient (or odds ratio for logistic):
+Interpret at least one predictor coefficient (or odds ratio for logistic regression). If your model includes multiple predictors, interpret at least two.
 - Name the predictor and outcome
 - State the direction and magnitude
 - Note whether it is statistically significant
@@ -36,8 +36,8 @@ For logistic regression, remember to use `exp(coef(model))` for odds ratios.
 
 ### Task 4: Run one diagnostic check
 
-- **Linear regression:** Run `plot(model, which = 1)` and `plot(model, which = 2)`. In a prose section, describe what you see.
-- **Logistic regression (multivariable):** Run `car::vif(model)`. In a prose section, note whether any values are concerning.
+- **Linear regression:** Run `plot(model, which = 1)` and `plot(model, which = 2)`.     Describe whether you see any clear patterns or changes in spread in the residuals vs. fitted plot, and whether the residuals appear approximately normally distributed in the Q-Q plot.
+- **Logistic regression (multivariable):** Run `car::vif(model)`. Report whether any VIF values are 5 or higher and what this suggests about multicollinearity. Note: If you fit a logistic regression with only one predictor, add a second predictor before checking VIF.
 
 ---
 
@@ -45,8 +45,8 @@ For logistic regression, remember to use `exp(coef(model))` for odds ratios.
 
 Include a final prose section (150–200 words) summarizing:
 - Your model (outcome + predictors)
-- Key results (coefficient interpretations)
-- Any diagnostic concerns
+- Key results (including direction, magnitude, and statistical significance)
+- Any concerns identified by your diagnostic checks
 
 ---
 
