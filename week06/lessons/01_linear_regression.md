@@ -21,11 +21,11 @@ Use linear regression when:
 library(tidyverse)
 
 # Predict systolic blood pressure from diastolic blood pressure
-model <- glm(bp_sys ~ bp_dia, data = hrs_df)
+model <- lm(bp_sys ~ bp_dia, data = hrs_df)
 summary(model)
 ```
 
-`glm()` fits a generalized linear model. For linear regression, the default family (gaussian) is used automatically.
+`lm()` fits a generalized linear model. For linear regression, the default family (gaussian) is used automatically.
 
 ---
 
@@ -33,13 +33,13 @@ summary(model)
 
 ```
 Coefficients:
-            Estimate Std. Error t value Pr(>|t|)
-(Intercept) 36.42      2.40      15.17   <2e-16 ***
-bp_dia       1.25      0.03      40.71   <2e-16 ***
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 38.71302    2.03510   19.02   <2e-16 ***
+bp_dia       1.21980    0.02595   47.00   <2e-16 ***
 ```
 
 Interpreting `bp_dia`:
-> "For each 1 mmHg increase in diastolic blood pressure, systolic blood pressure is expected to be 1.25 mmHg higher, on average."
+> "For each 1 mmHg increase in diastolic blood pressure, systolic blood pressure is expected to be 1.22 mmHg higher, on average."
 
 Key elements of an interpretation:
 1. Name the predictor and outcome
@@ -52,7 +52,7 @@ Key elements of an interpretation:
 ## Multivariable linear regression
 
 ```r
-model_multi <- glm(bp_sys ~ bp_dia + age + female, data = hrs_df)
+model_multi <- lm(bp_sys ~ bp_dia + age + female, data = hrs_df)
 summary(model_multi)
 ```
 
@@ -62,12 +62,12 @@ Each coefficient represents the effect of that variable *holding all others cons
 
 ## Knowledge check
 
-A linear regression predicts systolic BP from age. The coefficient for age is 0.45 (p < 0.001). Write a plain-language interpretation.
+A linear regression predicts systolic BP from age. The coefficient for age is 0.61 (p < 0.001). Write a plain-language interpretation.
 
 <details>
 <summary>Answer</summary>
 
-"For each additional year of age, systolic blood pressure is expected to be 0.45 mmHg higher, on average. This association is statistically significant (p < 0.001)."
+"For each additional year of age, systolic blood pressure is expected to be 0.61 mmHg higher, on average. This association is statistically significant (p < 0.001)."
 
 </details>
 
