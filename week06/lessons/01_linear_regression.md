@@ -2,8 +2,6 @@
 
 ## What is linear regression?
 
-Linear regression predicts a **continuous dependent variable** from one or more **independent variables**, and describes the relationship between them.
-
 Linear regression is used to examine the relationship between a **continuous outcome (dependent variable)** and one or more **predictors (independent variables)**.
 
 Use linear regression when:
