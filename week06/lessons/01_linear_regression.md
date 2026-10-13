@@ -4,12 +4,14 @@
 
 Linear regression predicts a **continuous dependent variable** from one or more **independent variables**, and describes the relationship between them.
 
+Linear regression is used to examine the relationship between a **continuous outcome (dependent variable)** and one or more **predictors (independent variables)**.
+
 Use linear regression when:
 - Your outcome (dependent variable) is continuous
 - You want to understand how predictors relate to the outcome
-- You want to control for confounders
+- You want to control for confounders (other variables that may influence the relationship)
 
-> **First step:** Always check that your outcome is approximately normally distributed before fitting a linear model.
+> **Note:** Linear regression does not require the outcome to be normally distributed. Instead, we check whether the model’s residuals (differences between observed and predicted values) are approximately normally distributed.
 
 ---
 
@@ -39,7 +41,7 @@ bp_dia       1.25      0.03      40.71   <2e-16 ***
 ```
 
 Interpreting `bp_dia`:
-> "For each 1-unit increase in diastolic blood pressure, systolic blood pressure is expected to increase by 1.25 mmHg, holding other variables constant."
+> "For each 1 mmHg increase in diastolic blood pressure, systolic blood pressure is expected to be 1.25 mmHg higher, on average."
 
 Key elements of an interpretation:
 1. Name the predictor and outcome
@@ -67,7 +69,7 @@ A linear regression predicts systolic BP from age. The coefficient for age is 0.
 <details>
 <summary>Answer</summary>
 
-"For each additional year of age, systolic blood pressure is expected to increase by 0.45 mmHg, holding other variables constant. This relationship is statistically significant."
+"For each additional year of age, systolic blood pressure is expected to be 0.45 mmHg higher, on average. This association is statistically significant (p < 0.001)."
 
 </details>
 
