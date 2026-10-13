@@ -5,6 +5,8 @@ author: "Your Name"
 
 ```{r setup, message=FALSE}
 library(tidyverse)
+# Install car if needed: install.packages("car")
+library(car)
 ```
 
 ## Data
@@ -20,7 +22,7 @@ glimpse(hrs_df)
 
 ## Linear Regression
 
-### Data check — is the outcome continuous and roughly normal?
+### Data check — is the outcome continuous?
 
 ```{r outcome-check}
 # We'll predict systolic blood pressure (bp_sys) from diastolic blood pressure (bp_dia)
@@ -31,7 +33,7 @@ hrs_df %>%
     labs(title = "Distribution of systolic blood pressure (outcome variable)")
 ```
 
-**Question:** Does `bp_sys` look approximately normal? Is linear regression appropriate?
+**Question:** Does `bp_sys` a continuous variable? Does its distribution need to be approximately normal for linear regression?
 
 *Your answer here:*
 
@@ -42,7 +44,7 @@ hrs_df %>%
 ```{r linear-model}
 hrs_clean <- hrs_df %>% drop_na(bp_sys, bp_dia, age_2014, female, depress_dx, bp_dx)
 
-model_linear <- glm(bp_sys ~ bp_dia, data = hrs_clean)
+model_linear <- lm(bp_sys ~ bp_dia, data = hrs_clean)
 summary(model_linear)
 ```
 
@@ -55,7 +57,7 @@ summary(model_linear)
 ### Multivariable linear regression
 
 ```{r multivariable-linear}
-model_multi <- glm(bp_sys ~ bp_dia + age_2014 + female, data = hrs_clean)
+model_multi <- lm(bp_sys ~ bp_dia + age_2014 + female, data = hrs_clean)
 summary(model_multi)
 ```
 
@@ -68,12 +70,13 @@ summary(model_multi)
 ### Residual diagnostics
 
 ```{r residuals}
-par(mfrow = c(1, 2))
+par(mfrow = c(1, 2))           # set two-panel layout
 plot(model_multi, which = 1)   # Residuals vs. Fitted
 plot(model_multi, which = 2)   # QQ plot
+par(mfrow = c(1, 1))           # reset layout
 ```
 
-**Question:** Do the residuals look well-behaved? Describe what you see.
+**Question:** Does the residuals vs. fitted plot show any clear patterns or changes in spread? Do the residuals appear approximately normally distributed in the Q-Q plot?
 
 *Your answer here:*
 
@@ -106,12 +109,10 @@ exp(coef(model_logistic))
 ## 🔨 Exercise: Multicollinearity Check
 
 ```{r vif-exercise}
-# Install car if needed: install.packages("car")
-library(car)
-
 # Check VIF for the multivariable linear model
 vif(model_multi)
 
-# Question: Are any VIF values concerning? What does this tell you?
+# Question: Are any VIF values 5 or higher?
+# What does this suggest about multicollinearity among the predictors?
 # Your answer here as a comment:
 ```
