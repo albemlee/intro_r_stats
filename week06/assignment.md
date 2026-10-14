@@ -15,7 +15,7 @@ Using your dataset, fit and interpret a regression model. Choose the model type 
 
 ### Task 1: Identify your outcome variable
 
-Determine whether your dependent variable is:
+Determine whether your outcome/dependent variable is:
 - **Continuous** → use linear regression (`lm()`)
 - **Binary** → use logistic regression (`glm(..., family = binomial)`)
 
@@ -23,7 +23,7 @@ Show a data check (histogram for continuous; frequency table for binary) to exam
 
 ### Task 2: Fit the model
 
-Include at least one independent variable. Show the model code and full output.
+Include at least one predictor/independent variable. Show the model code and full output.
 
 ### Task 3: Interpret your regression coefficients
 
