@@ -2,33 +2,33 @@
 
 ## What is survival analysis?
 
-Survival analysis studies **time until an event occurs** — the event could be death, disease progression, hospital discharge, equipment failure, or anything with a clear start and end point.
+Survival analysis studies **time until an event occurs** — the event could be death, disease progression, hospital discharge, equipment failure, or any other event of interest.
 
 Two key variables:
-- **Time to event** (or time to censoring): how long until the event occurred (or the study ended)
-- **Status**: did the event occur (1) or is the observation censored (0)?
+- **Time to event** (or time to censoring): how long until the event occurred or the observation was censored (e.g., if the study ended or the participant drops out before the event occurred).
+- **Status**: whether the event occured (1) or the observation was censored (0)?
 
 ---
 
 ## What is censoring?
 
-**Censoring** means the event had not yet occurred by the end of the study — the patient was still alive, still event-free, or left the study early.
+**Censoring** means the event was not observed during the patient’s follow-up - for example, because the study ended or the patient left the study early.
 
-Censored observations are **not missing data**. They contribute real information: we know the patient survived at least until their censoring time.
+Censored observations are **not simply missing data**. They contribute real information: we know the patient remained event-free at least until their censoring time.
 
-> ❌ Do not remove censored observations before analysis — this biases results toward patients who experienced the event and produces overly pessimistic survival estimates.
+> ❌ Do not remove censored observations before analysis — this biases results by excluding patients who did not experience the event during follow-up.
 
-Survival analysis is specifically designed to handle censoring correctly. Standard regression is not.
+Survival analysis is specifically designed to account for censoring, unlike standard regression methods.
 
 ---
 
-## The three methods of survival analysis
+## Three common methods of survival analysis
 
 | Method | Purpose |
 |--------|---------|
-| **Kaplan-Meier curve** | Visualize survival probability over time (descriptive) |
+| **Kaplan-Meier curve** | Estimate and visualize survival probability over time (descriptive) |
 | **Log rank test** | Compare survival between two groups (hypothesis test) |
-| **Cox proportional hazards** | Multivariable survival regression |
+| **Cox proportional hazards** | Examine associations between one or more predictors and time to an event (model-based tests) |
 
 ---
 
@@ -39,7 +39,7 @@ Survival analysis is specifically designed to handle censoring correctly. Standa
 <details>
 <summary>Answer</summary>
 
-**False.** Censored observations must be retained. They provide information about the time during which the patient was event-free. Removing them biases the analysis.
+**False.** Censored observations must be retained. They provide information about how long patients remained event-free. Removing them can bias the results.
 
 </details>
 
