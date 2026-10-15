@@ -2,18 +2,18 @@
 
 ## What is a Kaplan-Meier curve?
 
-A **Kaplan-Meier (KM) curve** plots the probability of surviving (not experiencing the event) over time. It is a descriptive tool — it tells you what happened in your sample.
+A **Kaplan-Meier (KM) curve** estimates and plots the probability of surviving (not experiencing the event) over time. It is a descriptive tool that shows how survival changes over time in your sample.
 
 Reading a KM curve:
-- **Y-axis:** Survival probability (1.0 = everyone alive, 0 = no one alive)
+- **Y-axis:** Estimated survival probability (1 = 100%, 0 = 0%)
 - **X-axis:** Time
-- **Steps downward:** Events occurred at that time point
+- **Steps downward:** One or more events occurred at that time point
 - **Flat sections:** No events during that interval
-- **Tick marks:** Censored observations
+- **Tick marks:** Times when observations were censored
 
-> **Flatter curve = better prognosis** — the group is maintaining higher survival probability for longer.
+> **Flatter curve = better prognosis** - a greater estimated proportion of the group remains event-free over time.
 
-> **⚠️ Red flag:** Lines that cross multiple times suggest the proportional hazards assumption is violated — the log rank test and Cox model may not be appropriate.
+> **⚠️ Red flag:** Lines that cross multiple times suggest the proportional hazards assumption is violated, which can affect the interpretation of Cox regression results (more on this in the last lesson).
 
 ---
 
@@ -37,18 +37,20 @@ plot(km_fit,
 legend("topright", legend = c("Male", "Female"), col = c("blue", "red"), lty = 1)
 ```
 
-`Surv(time, status)` creates a survival object. `time` is time-to-event, `status` is 1 if the event occurred and 0 if censored.
+`Surv(time, status)` creates a survival object using the observed `time` and event status. `status` is 1 if the event occurred and 0 if censored.
+
+`survfit()` estimates the Kaplan-Meier survival curves separately for each group.
 
 ---
 
 ## Knowledge check
 
-A KM curve shows two groups. Group A's line stays near 0.8 survival probability through 24 months. Group B's line drops to 0.4 by 12 months. What does this tell you?
+A KM curve shows two groups. At 12 months, Group A has an estimated survival probability of 0.8, while Group B has a survival probability of 0.4. What does this tell you?
 
 <details>
 <summary>Answer</summary>
 
-In this sample, Group A has better survival — a higher proportion remain event-free over the 24-month period. This is a descriptive observation from the sample; inferential tests (log rank, Cox) are needed to assess whether the difference is statistically significant.
+Group A has a higher estimated survival probability (80% vs. 40%) at 12 months. This is merely a descriptive comparison - statistical tests are needed to determine whether there is evidence of a difference between groups.
 
 </details>
 
