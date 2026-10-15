@@ -25,7 +25,7 @@ This is a central assumption of Cox regression - it means that the hazard ratio 
 - **How to check:** Kaplan-Meier curves can provide clues — curves that cross may suggest the assumption is violated, although formal statistical tests are needed to assess it.
 - **If violated:** Consider alternative approaches, such as allowing the hazard ratio to change over time.
 
-This is a more advanced topic that is out of scope for the course - just be aware of this for now, and remember that it should be checked.
+This is a more advanced topic that is beyond the scope of this course. For now, just be aware that the proportional hazards assumption should be checked when using Cox regression.
 
 ---
 
