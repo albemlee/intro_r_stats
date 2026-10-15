@@ -2,12 +2,12 @@
 
 ## What is the log rank test?
 
-The **log rank test** compares survival between two (or more) groups. It is the hypothesis test counterpart to the Kaplan-Meier curve.
+The **log rank test** compares survival over time between two or more groups. It tests whether the groups have different survival experiences.
 
-- **H₀:** There is no difference in survival between the groups
-- **Hₐ:** There is a difference in survival between the groups
+- **H₀:** The groups have the same survival probabilities over time.
+- **Hₐ:** The groups have different survival probabilities over time.
 
-The test is **non-parametric** — it makes no distributional assumptions.
+The test is **non-parametric** — it does not assume that survival times follow a particular distribution.
 
 ---
 
@@ -21,6 +21,9 @@ library(survival)
 survdiff(Surv(mos_to_death, died) ~ female, data = hrs_df)
 ```
 
+`survdiff()` performs the log rank test to compare survival between groups.
+
+
 Example output:
 ```
         N  Observed  Expected  (O-E)^2/E  (O-E)^2/V
@@ -29,19 +32,21 @@ female=1 1458   354       408       7.27       18.7
 Chisq = 18.7 on 1 df, p = 2e-05
 ```
 
+Focus on the p-value at the bottom of the output to determine whether there is evidence of a difference in survival between groups.
+
 Interpretation:
-> "There is a statistically significant difference in survival between male and female participants (log rank p < 0.001). We reject the null hypothesis of no difference in survival."
+> "There is evidence of a difference in survival between male and female participants (log rank p < 0.001). We reject the null hypothesis of equal survival between groups."
 
 ---
 
 ## Knowledge check
 
-A log rank test returns p = 0.0002 at a significance level of 0.05. What is your conclusion?
+A log rank test gives a p-value of 0.0002. Using a significance level of 0.05, what would you conclude?
 
 <details>
 <summary>Answer</summary>
 
-Reject the null hypothesis. There is a statistically significant difference in survival between the groups. The probability of observing this or a more extreme result if the groups had equal survival is 0.02%.
+Reject the null hypothesis because p < 0.05. There is statistically significant evidence that survival differs between the groups.
 
 </details>
 
