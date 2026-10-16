@@ -15,22 +15,22 @@ Complete all items before the Week 8 session.
 - [ ] Dataset selected from a reputable public source (no PHI or institutional IP)
 - [ ] Descriptive analysis complete (Week 4 assignment written section saved)
 - [ ] Inferential analysis complete (Week 5 assignment written section saved)
-- [ ] Regression or survival analysis complete if applicable (Week 6 assignment)
+- [ ] Regression or survival analysis complete, if applicable (Weeks 6-7)
 
 ### Video
 - [ ] 2-minute screen-capture video recorded
-- [ ] Video covers all required sections (see "Need the details?" below)
+- [ ] Video includes all required content (see "Need the details?" below)
 - [ ] Video uploaded to YouTube, UCSF OneDrive, or Media@UCSF
 - [ ] Video link tested in a private/incognito browser window
 
 ### Code
 - [ ] Public GitHub repository created
-- [ ] All `.Rmd` notebooks in the repository run without errors
-- [ ] Notebooks include prose explanations alongside code chunks
+- [ ] All `.Rmd` notebooks in the repository run successfully from start to finish 
+- [ ] Notebooks include written explanations of the code and results
 - [ ] If AI tools were used: `prompts.txt` file in the repo with all prompts used, and a note in the README
 
 ### Submission
-- [ ] Video link and GitHub repo link submitted in the provided table before class
+- [ ] Video and GitHub repository links submitted in the provided table before the Week 8 session
 
 ---
 
