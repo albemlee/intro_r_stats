@@ -13,6 +13,7 @@ library(survival)
 This data was obtained from the publicly available Health and Retirement Study: https://hrs.isr.umich.edu/about
 
 ```{r load-data}
+# Remove observations with missing values in variables used for analysis
 surv_df <- read_csv("hrs/hrs_analyze.csv") %>%
   drop_na(mos_to_death, died, female, age_2014, bp_dx, depress_dx)
 
@@ -39,7 +40,7 @@ surv_df %>%
 ## Kaplan-Meier Curve
 
 ```{r km-fit}
-# Fit KM curve by sex
+# Fit KM curve by sex (note: mos_to_death represents time to death or censoring)
 km_fit <- survfit(Surv(mos_to_death, died) ~ female, data = surv_df)
 summary(km_fit, times = c(12, 24, 36, 48))
 ```
@@ -58,7 +59,7 @@ legend("topright",
        lwd    = 2)
 ```
 
-**Interpret the KM curves in 1–2 sentences using descriptive language:**
+**Interpret the KM curves in 1–2 sentences. Which group has higher estimated survival probabilities over time?**
 
 *Your interpretation here ("In this sample..."):*
 
@@ -70,7 +71,7 @@ legend("topright",
 survdiff(Surv(mos_to_death, died) ~ female, data = surv_df)
 ```
 
-**State the full hypothesis test result:**
+**State the null and alternative hypotheses, report the p-value, and explain whether there is evidence of a difference in survival between groups.**
 
 *H₀:*  
 *Hₐ:*  
@@ -94,9 +95,21 @@ summary(cox_model)
 exp(coef(cox_model))
 ```
 
-**Interpret the hazard ratio for `depress_dx` in plain language:**
+**Interpret the hazard ratio for `depress_dx` in plain language, including what the model adjusts for.**
 
-*Your interpretation here (include: predictor, outcome, HR value, direction, significance):*
+*Your interpretation here (include: HR value, direction, statistical significance, and adjustment variables):*
+
+---
+
+## Cox regression — Proportional hazards assumption
+
+```{r proportional-hazards}
+# Check the proportional hazards assumption
+cox.zph(cox_model)
+```
+
+**Does the test suggest that the proportional hazards assumption may be violated? (Hint: Look at the GLOBAL p-value.)**
+
 
 ---
 
@@ -115,3 +128,5 @@ surv_df <- surv_df %>%
 
 # 4. Interpret the result in plain language (as a comment)
 ```
+
+
