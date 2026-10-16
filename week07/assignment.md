@@ -12,7 +12,7 @@ See the [Final Project](../week08/final_project.md) for the full project descrip
 Complete all items before the Week 8 session.
 
 ### Analysis
-- [ ] Dataset selected from a reputable public source (no PHI or institutional IP)
+- [ ] Dataset selected from a reputable public source (no PHI or other nonpublic data)
 - [ ] Descriptive analysis complete (Week 4 assignment written section saved)
 - [ ] Inferential analysis complete (Week 5 assignment written section saved)
 - [ ] Regression or survival analysis complete, if applicable (Weeks 6-7)
@@ -27,7 +27,7 @@ Complete all items before the Week 8 session.
 - [ ] Public GitHub repository created
 - [ ] All `.Rmd` notebooks in the repository run successfully from start to finish 
 - [ ] Notebooks include written explanations of the code and results
-- [ ] If AI tools were used: `prompts.txt` file in the repo with all prompts used, and a note in the README
+- [ ] If AI tools were used: `prompts.txt` included in the repository and AI use noted in the submission table.
 
 ### Submission
 - [ ] Video and GitHub repository links submitted in the provided table before the Week 8 session
