@@ -1,4 +1,4 @@
-# Log-Rank Test
+# Log-Rank Tests
 
 ## What is the log-rank test?
 
