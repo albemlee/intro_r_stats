@@ -1,6 +1,6 @@
-# Log Rank Test
+# Log-Rank Test
 
-## What is the log rank test?
+## What is the log-rank test?
 
 The **log rank test** compares survival over time between two or more groups. It tests whether the groups have different survival experiences.
 
